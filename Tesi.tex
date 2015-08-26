@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{memoir}
+\usepackage[italian]{babel}
+\usepackage{./stile}
+\usepackage{adjustbox}
+\usepackage{soul}
+\usepackage{epigraph}
+\usepackage{emptypage}
+%posizione dei file di capitolo per il documento corrente
+
+%default scts (sections)
+\newcommand{\docs}{./sezioni/}
+%posizione delle immagini per il documento corrente
+\newcommand{\docsImg}{./sezioni/img/}
+
+
+
+
+
+
+
+
+
+%
+%	Dati locali del documento
+%
+%Titolo documento
+\newcommand{\titoloDocumento}{Analisi dei Requisiti}
+%Prima data di creazione del documento
+\newcommand{\dataCreazione}{2015/08/26}
+\newcommand{\dataUM}{2015/07/03}
+%Inserite la versione attuale del documento
+\newcommand{\versione}{1.0}
+%
+
+\rhead{\titoloDocumento}
+\lfoot{Versione: \versione}
+\title{\titoloDocumento}
+
+\begin{document}
+
+\input{\docs Front.tex}
+\newpage
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\tableofcontents
+\newpage
+\listoffigures
+\listoftables
+\newpage
+\newpage
+\input{\docs Aforismi.tex}
+\newpage
+\input{\docs Introduzione.tex}
+\newpage
+\input{\docs Ringraziamenti.tex}
+\newpage
+
+
+\end{document}
