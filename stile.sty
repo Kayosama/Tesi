@@ -1,0 +1,58 @@
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[top=0.5in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{eso-pic}
+\usepackage{lastpage}
+\usepackage{titlesec}
+
+\hypersetup {
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue,
+	citecolor=blue
+}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% modifica formato titoli sezioni
+\titleformat{\section}
+{\normalfont\Huge\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\Large\bfseries}{\thesubsection}{1em}{}
+
+% Setup Header + Footer
+\fancyhead{} %annulla head di default
+\fancyfoot{} %annulla foot di default
+
+\pagestyle{fancy}
+\fancyhead[LO]{\sectionmark}
+\fancyhead[RE]{\thesection}
+\fancyhead[LO]{\subsectionmark}
+\fancyhead[RE]{\thesubsection}
+\setlength{\headheight}{1cm} %settato grandezza header
+
+\renewcommand{\footrulewidth}{0.5pt} %ridefinisco il valore della riga di intestazione
+\renewcommand{\headrulewidth}{0.5pt} %ridefinisco il valore della riga di pie' di pagina
+\addtolength{\headwidth}{\marginparsep}
+\addtolength{\headwidth}{\marginparwidth}
+
+\cfoot{ Tesi di Laurea - Rossetto Francesco }
+\rfoot{\thepage\ di \pageref*{LastPage}}
+
+% commands
+\newcommand{\firstPagePic}{
+	\put(0,0){
+		\parbox[b][\paperheight]{\paperwidth}{
+			\vfill
+			\centering
+			\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Img/logoUnipdGrigio.png}
+			\vfill
+		}
+	}
+}
