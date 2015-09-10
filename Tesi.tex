@@ -1,5 +1,4 @@
-\documentclass[12pt,a4paper]{memoir}
-\usepackage[italian]{babel}
+\documentclass[12pt,twoside,a4paper]{article}
 \usepackage{./stile}
 \usepackage{adjustbox}
 \usepackage{soul}
@@ -11,14 +10,6 @@
 \newcommand{\docs}{./sezioni/}
 %posizione delle immagini per il documento corrente
 \newcommand{\docsImg}{./sezioni/img/}
-
-
-
-
-
-
-
-
 
 %
 %	Dati locali del documento
@@ -32,8 +23,6 @@
 \newcommand{\versione}{1.0}
 %
 
-\rhead{\titoloDocumento}
-\lfoot{Versione: \versione}
 \title{\titoloDocumento}
 
 \begin{document}
@@ -51,6 +40,16 @@
 \input{\docs Aforismi.tex}
 \newpage
 \input{\docs Introduzione.tex}
+\newpage
+\input{\docs Progetto.tex}
+\newpage
+\input{\docs StrategiaAziendale.tex}
+\newpage
+\input{\docs ValutazioneRetrospettiva.tex}
+\newpage
+\input{\docs Appendice.tex}
+\newpage
+\input{\docs Glossario.tex}
 \newpage
 \input{\docs Ringraziamenti.tex}
 \newpage

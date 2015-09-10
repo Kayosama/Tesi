@@ -1,6 +1,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-\usepackage[top=0.5in, bottom=1.0in, left=1.0in, right=1.0in]{geometry}
+\pagestyle{fancy}
+\usepackage[top=1.0in, bottom=1.5in, left=1.0in, right=1.0in]{geometry}
 \usepackage{graphicx}
 \usepackage[colorlinks]{hyperref}
 \usepackage{hyperref}
@@ -8,6 +9,7 @@
 \usepackage{eso-pic}
 \usepackage{lastpage}
 \usepackage{titlesec}
+\usepackage[italian]{babel}
 
 \hypersetup {
 	colorlinks=true,
@@ -15,6 +17,9 @@
 	urlcolor=blue,
 	citecolor=blue
 }
+
+\hyphenation{PlaylistPanel-AnimationController}
+\hyphenation{ri-feriscono}
 
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
@@ -26,25 +31,25 @@
 \titleformat{\subsection}
 {\normalfont\Large\bfseries}{\thesubsection}{1em}{}
 
+\titleformat{\subsubsection}
+{\normalfont\large\bfseries}{\thesubsubsection}{1em}{}
+
 % Setup Header + Footer
-\fancyhead{} %annulla head di default
-\fancyfoot{} %annulla foot di default
+%\fancypagestyle{plain} {
+	\fancyhead{} %annulla head di default
+	\fancyfoot{} %annulla foot di default
+	\fancyhead[LO]{\leftmark}
+	\fancyhead[RE]{\rightmark}
+	\setlength{\headheight}{1cm} %settato grandezza header
+	\fancyfoot[C]{Tesi di Laurea - Trivellato Davide}
+	\fancyfoot[RO, LE] {\thepage\ di \pageref*{LastPage}}
+	
+	\renewcommand{\footrulewidth}{0.4pt} %ridefinisco il valore della riga di intestazione
+	\renewcommand{\headrulewidth}{0.4pt} %ridefinisco il valore della riga di pie' di pagina
 
-\pagestyle{fancy}
-\fancyhead[LO]{\sectionmark}
-\fancyhead[RE]{\thesection}
-\fancyhead[LO]{\subsectionmark}
-\fancyhead[RE]{\thesubsection}
-\setlength{\headheight}{1cm} %settato grandezza header
-
-\renewcommand{\footrulewidth}{0.5pt} %ridefinisco il valore della riga di intestazione
-\renewcommand{\headrulewidth}{0.5pt} %ridefinisco il valore della riga di pie' di pagina
-\addtolength{\headwidth}{\marginparsep}
-\addtolength{\headwidth}{\marginparwidth}
-
-\cfoot{ Tesi di Laurea - Trivellato Davide }
-\rfoot{\thepage\ di \pageref*{LastPage}}
-
+	%\cfoot{ Tesi di Laurea - Rossetto Francesco }
+	%\rfoot{\thepage\ di \pageref*{LastPage}}
+%}
 % commands
 \newcommand{\firstPagePic}{
 	\put(0,0){
