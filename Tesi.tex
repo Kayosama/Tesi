@@ -4,6 +4,8 @@
 \usepackage{soul}
 \usepackage{epigraph}
 \usepackage{emptypage}
+\usepackage{sectsty}
+\usepackage{longtable}
 %posizione dei file di capitolo per il documento corrente
 
 %default scts (sections)
@@ -21,8 +23,8 @@
 \newcommand{\dataUM}{2015/07/03}
 %Inserite la versione attuale del documento
 \newcommand{\versione}{1.0}
-%
 
+%
 \title{\titoloDocumento}
 
 \begin{document}
@@ -31,6 +33,7 @@
 \newpage
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
+\setcounter{page}{1}
 \tableofcontents
 \newpage
 \listoffigures
@@ -39,6 +42,7 @@
 \newpage
 \input{\docs Aforismi.tex}
 \newpage
+
 \input{\docs Introduzione.tex}
 \newpage
 \input{\docs StrategiaAziendale.tex}
@@ -47,11 +51,12 @@
 \newpage
 \input{\docs ValutazioneRetrospettiva.tex}
 \newpage
+\appendix
 \input{\docs Appendice.tex}
 \newpage
 \input{\docs Glossario.tex}
 \newpage
-\input{\docs Ringraziamenti.tex}
+\input{\docs Bibliografia.tex}
 \newpage
 
 
