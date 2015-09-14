@@ -79,8 +79,45 @@ In questa parte di formazione, dopo aver seguito e implementato un tutorial rigu
 \end{figure}
  
 \subsubsection{Vuforia SDK}
-Terminata la parte di formazione su Unity 3D, e' iniziata la parte di formazione su Vuforia SDK, l'SDK utilizzato dall'azienda per l'implementazione della realta' aumentata
-\subsubsection{Photon}
+Terminata la parte di formazione su Unity 3D, e' iniziata la parte di preparazione relativa a Vuforia SDK, l'SDK utilizzato dall'azienda per l'implementazione della realta' aumentata. Nello specifico, il team tecnico si e' occupato di spiegarmi come funziona l'SDK, e come funziona nello specifico il plugin di Unity, grazie alla quale è possibile operare all’interno di un unico ambiente di lavoro. Le attivita' principali svolte in questo lasso di tempo sono state l'implementazione di modelli 3D e di video associati ai tag, e lo studio sul riconoscimento e la creazione di tag ottimali.
+
+\subsubsection{Photon Unity Networking}
+Photon Unity Networking (PUN) e' un framework di Unity per l'implementazione del multiplayer realtime neigiochi o nelle applicazioni sviluppate. Le applicazioni svilupapte con Photon vengono eseguite su un server cloud proprietario. Quindi, le operazioni di scaling e di service hosting sonogestite interamente da PUN, permettendo allo sviluppatore di concentrarsi puramente sulla costruzione dell'applicazione. Tutti i prodotti Photon Cloud sono basati su un'architettura client-to-server, che e' la soluzione ottimale per il gaming onlire rispetto a una connessione peer-to-peer.\\
+Photon e' un package scaricabile dall'Asset Store, e nella sua versione gratuita prevede l'accesso concorrente fino a 20 utenti sulla stessa stanza. \\\\
+Di seguito vengono riportati esempi di codice per mostrare la semplicita' di utilizzo del framework.\\
+\begin{itemize}
+	\item \textbf{Connessione al server}: La connessione al server si basa sul passaggio di una stringa contenente la versione dell'applciazione. Puo' essere usata per dividere gruppi di client.
+\begin{lstlisting}
+PhotonNetwork.ConnectUsingSettings("1.0");
+\end{lstlisting}
+
+	\item \textbf{Accesso a una stanza}: Per prendere parte a una partita esistente basta la seguente riga di codice specificando il nome della stanza in cui si vuole entrare.
+\begin{lstlisting}
+PhotonNetwork.JoinRoom("RoomName");
+\end{lstlisting}
+
+	\item \textbf{Creare una stanza}: per creare una stanza basta fornire il nome, dare la possibilita' o meno di essere trovata da altri utenti, fornire la possibilita' agli altri di entrare, e il numero massimo di giocatori.
+\begin{lstlisting}
+public void OnConnectedToMaster()
+{
+	PhotonNetwork.CreateRoom("RoomName", true, true, 4);
+}
+
+\end{lstlisting}	
+	
+\end{itemize}
+
+Lo studio di Photon Unity Networking non mi e' stato imposto dall'azienda, ma e' stato un approfondimento che ho voluto fare di mia iniziativa per lo sviluppo dell'esempio di contenuto in realta' aumentata a tema libero di cui parlero' successivamente.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{\docsImg Photon.png}
+	\caption{Architettura generale del framework Photon Unity Networking}
+	\label{fig:Architettura generale del framework Photon Unity Networking}
+\end{figure}
+
+PUN si e' dimostrato uno strumento molto potente e relativamente di facile utilizzo. Creare un semplice scambio di dati tra diversi client e' risultato piuttosto semplice. Il livello di difficolta' e' salito quando ho cercato di aumentare il numero di informazioni passate e il numero di oggetti da "osservare". Essendo uno studio non richiesto dall'azienda, ho preferito non spendere troppo tempo in approfondimenti ma piuttosto avere un'idea chiara del funzionamento di base.
+
 \subsubsection{Esempio di contenuto in realta' aumentata a tema libero}
 
 \subsection{Svolgimento delle attivita'}
