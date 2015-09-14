@@ -31,23 +31,130 @@ Si richiedeva, inoltre, l'implementazione di una feature nuova, per fornire la g
 \\
 \\
 La seconda parte del progetto consisteva nella gestione di un avatar umanoide in realta' aumentata e di un modello tridimensionale rappresentante un ventaglio in legno da usare come sipario per la comparsa dell'avatar. L'avatar doveva effettuare una presentazione iniziale dell'applicazione e delle tipologie di prodotto, e si voleva poterlo richiamare successivamente tramite un apposito pulsante per richiedere spiegazioni riguardanti particolari categorie di prodotto concordate con il committente.
+
 \subsection{Vincoli imposti}
+Per tutta la durata di svolgimento dello stage sono state imposte alcune condizioni da rispettare, spiegate di seguito, divise per tipologia.
+
 \subsubsection{Vincoli tecnologici}
 \paragraph{Android}
 Android è un sistema operativo personalizzabile per dispositivi mobili sviluppato da Google Inc. basato su kernel Linux.
 È stato progettato principalmente per smartphone e tablet, con interfacce utente specializzate per televisori (Android TV), automobili (Android Auto), orologi da polso (Android Wear), occhiali (Google Glass), e altri.
 È per la quasi totalità Free and Open Source Software, ed è distribuito sotto i termini della licenza libera Apache 2.0.\\
 Android dispone di una vasta comunità di sviluppatori che realizzano applicazioni con l'obiettivo di aumentare le funzionalità dei dispositivi. Queste applicazioni sono scritte soprattutto in linguaggio di programmazione Java.
+\\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{\docsImg Usage.jpg}
+	\caption{Utilizzo dei sistemi operativi mobile nel secondo quarto del 2014 (dato fornito da Net Applications)}
+	\label{fig:Utilizzo dei sistemi operativi mobile nel secondo quarto del 2014}
+\end{figure}
+
+Si e' scelto di sviluppare il progetto, in prima istanza, per i dispositivi Android su richiesta del committente (anche se la release dell'app e' avvenuta anche su iOS) e soprattutto perche', mentre Apple vive in un ambiente chiuso e ben definito, per quanto riguarda Android ci si trova a dover fare i conti con la diversita' di hardware dei dispositivi e diverse risoluzioni degli schermi. Per lo sviluppo dell'app si predilige Android, in quanto possono sorgere piu' problematiche, e dato che Unity, comunque, offre la possibilita' di sviluppare l'app solo una volta e distribuirla a piu' dispositivi diversi.
+
 
 \paragraph{Unity 3D}
+Come gia' spiegato in precedenza, Unity 3D è un ambiente di sviluppo per la creazione di giochi. Come prima cosa fornisce un potente engine di supporto. Il motore in questione offre il supporto completo per tutti gli aspetti quali rendering grafico, effetti di luce, creazione di terrain, simulazioni fisiche, implementazione dell’audio, funzionalità di rete e, cosa piu' importante, un sistema di scripting.
+Unity semplifica di molto la vita del programmatore con piccole feature di qualita', come per esempio la "live preview", che consente di vedere dal vivo quello che si sta creando, con un solo click. Inoltre, mette a disposizione un sistema di gestione delle risorse da usare nel progetto efficace ed intuitivo.
+I formati di file supportati dall'engine sono molteplici. 
+\\Per i modelli 3D si ha il pieno supporto ai file generati da:
+
+\begin{multicols}{3}
+\begin{itemize}
+	\item Maya;
+	\item 3D Studio Max;
+	\item Cinema4D;
+	\item Blender;
+	\item SketchUp;
+	\item Cheetah;
+	\item Lightwave;
+	\item XSI;
+	\item Carrara;
+	\item Wavefront Obj.
+\end{itemize}
+\end{multicols}
+Mentre per quanto riguarda le immagini, i formati supportati sono:
+
+\begin{multicols}{3}
+	\begin{itemize}
+	\item JPEG;
+	\item PNG;
+	\item GIF;
+	\item BMP;
+	\item TGA;
+	\item IFF;
+	\item PICT;
+\end{itemize}
+\end{multicols}
+
+Anche a livello di audio il sistema si difende piuttosto bene: 
+\begin{multicols}{2}
+	\begin{itemize}
+		\item MP3;
+		\item Ogg Vorbis;
+		\item AIFF;
+		\item WAV.
+	\end{itemize}
+\end{multicols}
+
+Infine, per i video si ha supporto a:
+\begin{multicols}{3}
+	\begin{itemize}
+		\item MP4;
+		\item MPG;
+		\item AVI;
+		\item MOV;
+		\item ASF;
+		\item MPEG.
+	\end{itemize}
+\end{multicols}
+
+Uno dei punti di forza di Unity 3D e' il fatto di essere gratuito in quasi tutte le sue features. Tuttavia,
+per particolari scopi o esigenze di pubblicazione, ci sono alcuni strumenti o parti del sistema che sono a pagamento. Unity e' la versione base che viene rilasciata gratuitamente con quasi tutte le funzionalita' piu' importanti a disposizione. Unity Pro, la versione apagamento, consente allo sviluppatore di usufruire di diverse features non presenti nella versione normale; su tutte l'assenza dello splash screen di Unity, cioe' della schermata iniziale mostrante il logo di Unity.
+Per usi commerciali, l'azienda necessita l'utilizzo della versione Pro, anche per il fatto che questa versione mette a disposizione utilissimi effetti di render su texture, di post processing e su luci e ombre.
+\\
+
+Nella figura \ref{fig:Versione base di Unity} si puo' osservare una tipica schermata di lavoro di Unity nella versione base (non Unity Pro) composta da cinque sezioni ben distinte:
+\begin{enumerate}
+	\item \textbf{Scene}: La scena e' lo spazio di lavoro in cui vengono posizionati gli oggetti di gioco e in cui e' possibile avere una visione "grezza" di come apparira' la nostra applicazione. In questa zona e' possibile effettuare azioni sugli oggetti, quali modificare la scala, cambiare la loro posizione sugli assi, ruotarli o modificare le loro ancore e pivot.
+	\item \textbf{Game}: questa sezione e' dove viene mostrata la "live preview" dell'applicazione. Schiacciando il pulsante "play", infatti, sara' possibile avviare l'applicazione e interagire con essa, con la possibilita' di poter usufruire di tutte le gesture mobile tramite l'uso di tastiera e mouse. Per simulare la camera del dispositivo viene usata una webcam collegata al computer.
+	\item \textbf{Hierarchy}: e' la gerarchia di oggetti di gioco istanziati. Qui si possono tenere sotto controllo tutti gli oggetti presenti nella scena e modificarne le parentele.
+	\item \textbf{Project}: nella sezione Project vengono inserite tutte le risorse che si vuole rendere disponibili nel progetto come texture, script, modelli 3D, etc. Qui vengono inseriti anche gli oggetti non istanziati nella scena, ma che devono essere istanziati runtime.
+	\item \textbf{Inspector}: l'inspector e'una sezione importantissima in cui si possono modificare tutti i parametri di ogni oggetto di gioco e agganciare nuove componenti come per esempio animator, collider, etc.
+\end{enumerate}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{\docsImg Unity.png}
+	\caption{Versione base di Unity}
+	\label{fig:Versione base di Unity}
+\end{figure}
+
+Anche il layout delle sezioni da utilizzare in Unity mi e' stato imposto, in quanto piu' persone lavorano sullo stesso progetto ed e' necessario non rimanere disorientati da una diversa disposizione dell'interfaccia.
+
+\paragraph{OpenGL ES}
+OpenGL ES è uno standard industriale per la programmazione grafica 3D su dispositivi mobile. Khronos Group, un conglomerato che include marchi come ATI, NVIDIA ed Intel si preoccupa di definire ed estendere lo standard.
+Attualmente esistono molte versioni diverse delle specifiche OpenGL ES. La versione 1.0 venne ricalcata sulla versione 1.3 di OpenGL, mentre la versione 1.1 si basa su OpenGL 1.5 e la 2.0 è definita in relazione a OpenGL 2.0. La versione di OpenGL ES utilizzata era la 2.0 poiche', ormai, la gran parte dei dispositivi Android supporta quel tipo di libreria grafica.
 
 \paragraph{Vuforia SDK}
+Come gia' descritto in precedenza, e' stato imposto il vincolo di utilizzo di Vuforia SDK, rispetto al suo principale competitor Metaio. La scelta e' stata fatta alle origini dell'azienda, ed e' stata fatta sulla base del supporto fornito in quanto documentazione, supporto e tutorial. Vuforia e' una piattaforma completa che offre feature di spessore quali:
 
-\paragraph{Monodevelop}
+\begin{itemize}
+	\item Rilevamento istantaneo dei tag locali;
+	\item Riconoscimento cloud fino a 1 milione di tag simultanei;
+	\item Riconoscimento e tracking di testo stampato;
+	\item Tracking contemporaneo fino a 5 tag;
+	\item Risultati eccezionali con condizioni ambientali sfavorevoli come tag semi-coperti e carenza di luce.
+\end{itemize}
+
+Rispetto a Metaio, Vuforia SDK presenta un tracking migliore e una migliore integrazione con Unity 3D, che ne hanno dettato la scelta rispetto all'utilizzo di Metaio e altri competitor minori. 
+
 
 \paragraph{C\#}
+Per la scrittura del codice e' stato imposto l'utilizzo di C\#, in quanto e' un linguaggio molto simile al Java, di cui avevo gia' una buona preparazione. L'alternativa all'utilizzo di C\# sarebbe stata Javascript, un linguaggio molto potente ma che avrebbe richiesto ulteriore tempo di formazione. Essendo che piu' persone collaborano sullo stesso progetto, si e' ritenuto indispensabile la piena comprensione da parte di tutti i membri del team di sviluppo del linguaggio utilizzato.
 
 \subsubsection{Vincoli metodologici}
+Durante tutta l’attività di stage, e' stato imposta la gestione del versionamento tramite l'utilizzo di TortoiseSVN, inserendo le componenti in un repository interno al server locale dell'azienda. Non mi e' stato fornito alcun vincolo su quando effettuare i commit, la cui gestione e' stata lasciata a me.
 
 \subsubsection{Vincoli temporali}
 Il progetto prevedeva che lo stagiaire svolgesse un totale di 320 ore di attività presso l’azienda ospitante, suddivise in circa 40 ore settimanali soggette a possibili variazioni nel caso di scadenze aziendali o di impegni di varia natura da parte dello studente. Tali ore si dovevano svolgere internamente all’orario d’ufficio, dal lunedì a venerdì dalle 9:00 alle 13:00 e dalle 14:30 alle 18:30.
@@ -62,3 +169,5 @@ Il periodo concordato e' stato suddiviso in due sezioni temporali della stessa d
 
 \subsection{Prospettive}
 Come descritto in precedenza, Experenti vuole ampliare il suo organico, inserendo nel team alcune nuove figure con una preparazione in ambito informatico e grafico. Il numero sempre crescente di progetti entranti rendono necessario l'inserimento di sviluppatori Android e iOS che seguano attivamente i progetti dalla fase di raccolta dei materiali, alla fase di progettazione, codifica e testing.
+\\
+Il settore altamente innovativo e appena nato della realta' aumentata, comporta la possibilita' di lavorare su progetti all'avanguardia in ambito AR. Basta osservare il lavoro svolto nel mio stage per accorgersi delle continue migliorie che gli si possono applicare. Experenti presta molta attenzione nella ricerca di clienti che possano offrire motivazione nel cercare soluzioni per il raggiungimento di un grado di innovazione sempre maggiore e cercare, quindi, di essere sempre un passo avanti rispetto ai competitor.

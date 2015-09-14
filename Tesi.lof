@@ -1,13 +1,18 @@
 \select@language {italian}
 \select@language {italian}
-\contentsline {figure}{\numberline {1}{\ignorespaces Logo di Experenti srl}}{3}{figure.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Grafico Hype Cycle sui principali trend (2014)}}{5}{figure.2}
-\contentsline {figure}{\numberline {3}{\ignorespaces Esempio di realta' aumentata - Planisfero}}{6}{figure.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Esempio di realta' aumentata - Motore}}{7}{figure.4}
-\contentsline {figure}{\numberline {5}{\ignorespaces Esempio di app configuratore}}{8}{figure.5}
-\contentsline {figure}{\numberline {6}{\ignorespaces Flusso dei processi interni secondo la metodologia Agile}}{10}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Esempio di Kanban Board}}{12}{figure.7}
-\contentsline {figure}{\numberline {8}{\ignorespaces Interfaccia di Unity 3D}}{13}{figure.8}
-\contentsline {figure}{\numberline {9}{\ignorespaces Architettura di Vuforia SDK e flusso di funzionamento delle operazioni di tracciamento delle immagini}}{14}{figure.9}
-\contentsline {figure}{\numberline {10}{\ignorespaces Esempio sviluppato su Google Cardboard di AR/VR}}{15}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Esempio di realta' aumentata}}{19}{figure.11}
+\thispagestyle {empty}
+\contentsline {figure}{\numberline {1}{\ignorespaces Logo di Experenti srl}}{1}{figure.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces Grafico Hype Cycle sui principali trend (2014)}}{3}{figure.2}
+\contentsline {figure}{\numberline {3}{\ignorespaces Esempio di realta' aumentata - Planisfero}}{4}{figure.3}
+\contentsline {figure}{\numberline {4}{\ignorespaces Esempio di realta' aumentata - Motore}}{5}{figure.4}
+\contentsline {figure}{\numberline {5}{\ignorespaces Esempio di app configuratore}}{6}{figure.5}
+\contentsline {figure}{\numberline {6}{\ignorespaces Flusso dei processi interni secondo la metodologia Agile}}{8}{figure.6}
+\contentsline {figure}{\numberline {7}{\ignorespaces Esempio di Kanban Board}}{10}{figure.7}
+\contentsline {figure}{\numberline {8}{\ignorespaces Interfaccia di Unity 3D}}{11}{figure.8}
+\contentsline {figure}{\numberline {9}{\ignorespaces Architettura di Vuforia SDK e flusso di funzionamento delle operazioni di tracciamento delle immagini}}{12}{figure.9}
+\contentsline {figure}{\numberline {10}{\ignorespaces Esempio sviluppato su Google Cardboard di AR/VR}}{13}{figure.10}
+\contentsline {figure}{\numberline {11}{\ignorespaces Utilizzo dei sistemi operativi mobile nel secondo quarto del 2014 (dato fornito da Net Applications)}}{16}{figure.11}
+\contentsline {figure}{\numberline {12}{\ignorespaces Versione base di Unity}}{18}{figure.12}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagramma di Gantt delle attivita'}}{21}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del tutorial riguardante l'animazione di un avatar 3D di cui successivamente e' stato eseguito il porting su Android}}{24}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Esempio di realta' aumentata}}{26}{figure.15}

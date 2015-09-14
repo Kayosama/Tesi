@@ -6,6 +6,7 @@
 \usepackage{emptypage}
 \usepackage{sectsty}
 \usepackage{longtable}
+\usepackage{multicol}
 %posizione dei file di capitolo per il documento corrente
 
 %default scts (sections)
@@ -23,7 +24,7 @@
 \newcommand{\dataUM}{2015/07/03}
 %Inserite la versione attuale del documento
 \newcommand{\versione}{1.0}
-
+\renewcommand*\arraystretch{1.5}
 %
 \title{\titoloDocumento}
 
@@ -33,18 +34,23 @@
 \newpage
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
-\setcounter{page}{1}
+
 \tableofcontents
 \newpage
 \listoffigures
 \listoftables
 \newpage
 \newpage
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addtocontents{lof}{\protect\thispagestyle{empty}}
 \input{\docs Aforismi.tex}
 \newpage
+\setcounter{page}{1}
 \input{\docs Introduzione.tex}
 \newpage
 \input{\docs StrategiaAziendale.tex}
+\newpage
+\input{\docs Resoconto.tex}
 \newpage
 \appendix
 \input{\docs Appendice.tex}
