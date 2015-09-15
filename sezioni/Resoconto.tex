@@ -83,7 +83,7 @@ Terminata la parte di formazione su Unity 3D, e' iniziata la parte di preparazio
 
 \subsubsection{Photon Unity Networking}
 Photon Unity Networking (PUN) e' un framework di Unity per l'implementazione del multiplayer realtime neigiochi o nelle applicazioni sviluppate. Le applicazioni svilupapte con Photon vengono eseguite su un server cloud proprietario. Quindi, le operazioni di scaling e di service hosting sonogestite interamente da PUN, permettendo allo sviluppatore di concentrarsi puramente sulla costruzione dell'applicazione. Tutti i prodotti Photon Cloud sono basati su un'architettura client-to-server, che e' la soluzione ottimale per il gaming onlire rispetto a una connessione peer-to-peer.\\
-Photon e' un package scaricabile dall'Asset Store, e nella sua versione gratuita prevede l'accesso concorrente fino a 20 utenti sulla stessa stanza. \\\\
+Photon e' un package scaricabile dall'Asset Store (negozio di Unity online in cui comprare o scaricare gratuitamente asset come script, modelli 3D e 2D, etc.), e nella sua versione gratuita prevede l'accesso concorrente fino a 20 utenti sulla stessa stanza. \\\\
 Di seguito vengono riportati esempi di codice per mostrare la semplicita' di utilizzo del framework.\\
 \begin{itemize}
 	\item \textbf{Connessione al server}: La connessione al server si basa sul passaggio di una stringa contenente la versione dell'applciazione. Puo' essere usata per dividere gruppi di client.
@@ -119,9 +119,92 @@ Lo studio di Photon Unity Networking non mi e' stato imposto dall'azienda, ma e'
 PUN si e' dimostrato uno strumento molto potente e relativamente di facile utilizzo. Creare un semplice scambio di dati tra diversi client e' risultato piuttosto semplice. Il livello di difficolta' e' salito quando ho cercato di aumentare il numero di informazioni passate e il numero di oggetti da "osservare". Essendo uno studio non richiesto dall'azienda, ho preferito non spendere troppo tempo in approfondimenti ma piuttosto avere un'idea chiara del funzionamento di base.
 
 \subsubsection{Esempio di contenuto in realta' aumentata a tema libero}
+Come ultimo passo a compimento del percorso di preparazione tecnologica e strumentale, e prima di iniziare la realizzazione del progetto principale di stage, mi e' stato chiesto di sviluppare un'applicazione completa con dei contenuti non banali in realta' aumentata. Cio' che mi e' stato reso disponibile per la realizzazione dell'app oltre a Unity 4.6.3 e Vuforia SDK 4, sono stati anche tutti i contenuti gratuiti disponibili sull'Asset Store. Ho quindi proceduto con un'accurata scansione dei contenuti scaricabili trovando cio' che fosse piu' utile per dare luce all'idea ins tato embrionale che avevo in mente.\\\\
+Quello che stavo cercando erano dei modelli 3D in stile "cartoon" per lo sviluppo di un videogioco sparatutto multiplayer in realta' aumentata.\\
+L'idea che volevo implementare era dare la possibilita' a piu' utenti di interagire sullo stesso tag, e rendere tali interazioni visibili ad utenti che si trovassero dall'altra parte del mondo. La prima idea che mi era venuta, era quella di gestire un oggetto 3D e dare la possibilita' di modificarne la struttura, il colore e la scala agli utenti, in modo che i cambiamenti fossero visibili a tutti gli utenti in osservazione su quel dato tag. Questo pero' non mi e' bastato, in quanto volevo vedere fino a che punto si poteva spingere un device Android con il rendering di contenuti in realta' aumentata. Per cui la realizzazione di un gioco mi sembrava perfetta per testare questi due aspetti.\\
+
+Come gia' detto ho effettuato uno studio di Photon Unity Networking per l'implementazione del multiplayer e successivamente ho proceduto con una semplice progettazione architetturale e con l'implementazione vera e propria.\\
+
+La prima cosa fatta e' stata la realizzazione della mappa di gioco, cercando di renderla il piu' simmetrica possibile in modo da non sfavorire nessuno dei due giocatori e creando delle barriere invisibili per non permettere ai giocatori di poter uscire dallo scenario.\\
+Il passo successivo e' stato quello di creare dei punti di respawn e di gestire la nascita dei giocatori in modo casuale sulla mappa. Avendo trovato sull'Asset Store un modello 3D gia' in possesso di animazioni e script che simulassero un soldato cartoon vero e proprio, non ho dovuto occuparmid ella gestione dell'avatar.\\
+Una volta creati e gestiti i punti di respawn, e' iniziato il lavoro di configurazione della lobby (contenitore di stanze) in primo luogo, e delle stanze successivamente, fornendo la possibilita' ai giocatori di creare la propria stanza e di vedere le stanze create dagli altri giocatori. Per la lobby e' stata creata una schermata iniziale apposita di scelta dello username e di creazione nuova stanza o accesso a una stanza gia' creata.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{\docsImg cot3.jpg}
+	\caption{Schermata iniziale di Call Of Toony con Lobby}
+	\label{fig:Schermata iniziale di Call Of Toony con Lobby}
+\end{figure}
+
+Inseguito, sono stati gestiti gli script relativi al passaggio dei dati attraverso la rete. In particolare i dati passati sono:
+
+\begin{itemize}
+	\item posizione e rotazione dei personaggi rispetto alla mappa;
+	\item percentuale di salute rimasta sulla health bar;
+	\item bersaglio colpito e chi ha colpito il bersaglio.
+\end{itemize}
+
+La gestione di questi dati ha permesso la gestione di un gioco basilare, in cui successivamente e' stata applicata un'area in cui rappresentare i log della partita, quali: spawn dei giocatori e le uccisioni avvenute. Inoltre, localmente e' stato reso disponibile il numero di morti del proprio personaggio, mentre non c'e' stato abbastanza tempo per gestire anche il numero di uccisioni.\\\\
+Il risultato e' stato un gioco fluido e ben strutturato, in grado di gestire il multiplayer ad una latenza bassissima e in grado di coinvolgere il giocatore in un'esperienza nuova e unica. I problemi riscontrati sono dovuti unicamente ai device, i quali a lungo termine presentano surriscaldamento, consumo elevato di batteria e un calo di frame per secondo.\\
+Il progetto e' piaciuto molto al team tecnico, che non ha escluso la possibilita', dopo un'accurata ottimizzazione, di un inserimento del contenuto in realta' aumentata all'interno dell'app Experenti.\\
+Il nome del gioco e' \textbf{Call Of Toony}, in richiamo a titoli videoludici del genere ben piu' noti.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{\docsImg cot1.jpg}
+	\caption{Call Of Toony - multiplayer su device diversi}
+	\label{fig:Call Of Toony - multiplayer}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{\docsImg cot2.jpg}
+	\caption{Call Of Toony - schermata di gioco}
+	\label{fig:Call Of Toony - schermata di gioco}
+\end{figure}
 
 \subsection{Svolgimento delle attivita'}
+Inizia ora la stesura di quanto svolto nel progetto vero e proprio, ripercorrendo tutte le fasi del ciclo di vita del software sviluppato fino al suo rilascio sui vari store. Per lo svolgimento del progetto sono state previste circa 120 ore inserite all'interno dell'orario di lavoro aziendale, dal lunedi al venerdi.\\
+Il nome dell'applicazione da sviluppare e' Cora' Parquet Live.\\
+Lo studio di fattibilita' e' stato fatto dal Project Manager insieme a un collega del reparto tecnico, ed io non ne ho potuto prendere parte.
+
+\subsubsection{Il cliente}
+Prima di procedere con gli aspetti tecnici e' bene avere una panoramica su chi e' il cliente che ha commissionato la realizzazione del progetto, quale target di pubblico punta a raggiungere e quali sono le sue aspettative.
+\\\\
+Il cliente in questione e' \textbf{Cora' Divisione Parquet}, una divisione dell'azienda \textbf{Cora' Legnami}, nata nel 1919. Cora' Parquet e' specializzata nella realizzazione di pavimenti in legno e realizza pavimentazioni per ambienti interni, ambienti esterni e spazi pubblici. L'azienda, leader nel settore, punta a raggiungere i suoi clienti attraverso canali innovativi grazie alla spinta al ringiovanimento voluta da Ettore Cora', amministratore delegato presso Cora' Domenico \& Figli SpA.\\
+La richiesta del cliente era la realizzazione di un configuratore in realta' aumentata di pavimentazioni in legno, in grado di essere utilizzato inizialmente a scopo fieristico e successivamente utilizzabile dai clienti finali dell'azienda in modo da avere uno strumento in grado di fare provare le varie linee di prodotto direttamente nelle case dei possibili clienti.\\
+Uno degli obiettivi era quello di fare scaturire nel possibile cliente cio' che viene chiamato "fattore wow", lasciando sbalordito il cliente e consolidando nella sua mente la propensione dell'azienda verso l'innovazione e il miglioramento.
+Il secondo obiettivo e' dato dal fatto che un'applicazione di un tale livello innovativo inevitabilmente produce un passaparola dagli utenti verso chi ancora non ha visto l'applicazione, generando quindi pubblicita' e maggiore visibilita' all'azienda.\\
+Per generare questo "effetto wow", Cora' ha deciso di farsi realizzare un modello tridimensionale di una pin-up con un vestito dilegno. Questo avatar avrebbe dovuto presentare le varie linee di prodotto ed eseguire una introduzione all'applicazione. Il modello e le animazioni non sono state realizzate internamente all'azienda ma sono state delegate a terzi.\\\\
+Infine, per quanto riguarda il target dell'app, ci si voleva rivolgere all'utente medio, in grado di poter stampare autonomamente il tag a casa propria. Visto che l'utente finale avrebbe dovuto essere la cosiddetta "signora Maria", ossia un utente senza particolare propensione per tecnicismi informatici e tecnologia in generale, l'applicazione doveva avere un elevato grado di usabilita' e doveva guidare l'utente passo passo.
+
 \subsubsection{Analisi dei requisiti}
+Nella metodologia Agile, l'insieme totale dei requisiti e' ottenibile esclusivamente nelle ultime iterazioni, o comunque a progetto quai ultimato. Questo perche' l'obiettivo principale del modello Agile e' quello di ottenere il massimo soddisfacimento del cliente nei tempi e nei costi preventivati.\\
+Alcuni aspetti di rifinitura sono stati quindi concordati in iterazioni intermedie, e sono stati accettati anche se cambiavano molto la struttura del progetto, purche' comunque non si avesse un totale stravolgimento di quanto fatto fino a quel punto.\\
+Dopo un'attenta analisi iniziale, sono stati estrapolati i casi d'uso principali dalle richieste del committente, da uno studio sull'utenza finale e basandosi sull'user story.\\
+L'analisi dei requisiti e' stata svolta insieme alla Project Manager, la quale a mantenuto i contatti con il responsabile d'azienda esterno per tutta la durata del progetto. Insieme a lei abbiamo stilato una lista di funzionalita' prioritarie e una lista, invece, di requisiti desiderabili e opzionali.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{\docsImg casi.png}
+	\caption{Diagramma dei casi d'uso generico relativo all'applicazione Cora' Parquet Live}
+	\label{fig:Diagramma dei casi d'uso generico relativo all'applicazione Cora' Parquet Live}
+\end{figure}
+
+Per quanto riguarda i requisiti, essi sono stati suddivisi in 3 categorie: requisiti obbligatori, requisiti opzionali e requisiti desiderabili.\\\\
+Segue ora una lista descrittiva dei principali requisiti. Il presente documento vuole garantire un discreto livello di dettaglio senza annoiare il lettore, per cui verranno elencate solo le funzionalita' principali.
+
+\textbf{Requisiti obbligatori:}
+
+\begin{itemize}
+	\item L'applicazione deve dare la possibilita' all'utente di sfogliare una lista di categorie di prodotto, suddivise alla radice in  "Linea di prodotto" e "Colori", che permetteranno di accedere agli stessi prodotti in due modi diversi. La lista deve essere navigabile in entrambe le direzioni (da padre a figlio e da figlio a padre).
+	
+	\item L'applicazione deve dare la possibilita' all'utente di visualizzare i prodotti appartenenti a una certa categoria e deve dare la possibilita' di selezionarne uno da visualizzare in realta' aumentata.
+	
+	\item 
+\end{itemize}
+
+
 \subsubsection{Progettazione}
 \subsubsection{Implementazione}
 \subsubsection{Verifica e validazione}

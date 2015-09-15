@@ -8,9 +8,19 @@
 \usepackage{longtable}
 \usepackage{multicol}
 \usepackage{listings}
-%posizione dei file di capitolo per il documento corrente
 
-%default scts (sections)
+\newenvironment{dedication}
+{\clearpage           % we want a new page
+	\thispagestyle{empty}% no header and footer
+	\vspace*{\stretch{1}}% some space at the top 
+	\itshape             % the text is in italics
+	\raggedleft          % flush to the right margin
+}
+{\par % end the paragraph
+	\vspace{\stretch{3}} % space at bottom is three times that at the top
+	\clearpage           % finish off the page
+}
+
 \newcommand{\docs}{./sezioni/}
 %posizione delle immagini per il documento corrente
 \newcommand{\docsImg}{./sezioni/img/}
@@ -25,6 +35,7 @@
 \newcommand{\dataUM}{2015/07/03}
 %Inserite la versione attuale del documento
 \newcommand{\versione}{1.0}
+\newcommand{\facciatabianca}{\newpage\shipout\null\stepcounter{page}}
 \renewcommand*\arraystretch{1.5}
 %
 \title{\titoloDocumento}
@@ -32,9 +43,15 @@
 \begin{document}
 
 \input{\docs Front.tex}
-\newpage
+\clearpage
 \setcounter{secnumdepth}{4}
 \setcounter{tocdepth}{3}
+
+\facciatabianca
+\input{\docs Aforismi.tex}
+\facciatabianca
+\input{\docs ringraziamenti.tex}
+\facciatabianca
 
 \tableofcontents
 \newpage
@@ -44,8 +61,6 @@
 \newpage
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \addtocontents{lof}{\protect\thispagestyle{empty}}
-\input{\docs Aforismi.tex}
-\newpage
 \setcounter{page}{1}
 \input{\docs Introduzione.tex}
 \newpage
