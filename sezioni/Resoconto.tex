@@ -179,7 +179,7 @@ Per generare questo "effetto wow", Cora' ha deciso di farsi realizzare un modell
 Infine, per quanto riguarda il target dell'app, ci si voleva rivolgere all'utente medio, in grado di poter stampare autonomamente il tag a casa propria. Visto che l'utente finale avrebbe dovuto essere la cosiddetta "signora Maria", ossia un utente senza particolare propensione per tecnicismi informatici e tecnologia in generale, l'applicazione doveva avere un elevato grado di usabilita' e doveva guidare l'utente passo passo.
 
 \subsubsection{Analisi dei requisiti}
-Nella metodologia Agile, l'insieme totale dei requisiti e' ottenibile esclusivamente nelle ultime iterazioni, o comunque a progetto quai ultimato. Questo perche' l'obiettivo principale del modello Agile e' quello di ottenere il massimo soddisfacimento del cliente nei tempi e nei costi preventivati.\\
+Nella metodologia Agile, l'insieme totale dei requisiti e' ottenibile esclusivamente nelle ultime iterazioni, o comunque a progetto quasi ultimato. Questo perche' l'obiettivo principale del modello Agile e' quello di ottenere il massimo soddisfacimento del cliente nei tempi e nei costi preventivati.\\
 Alcuni aspetti di rifinitura sono stati quindi concordati in iterazioni intermedie, e sono stati accettati anche se cambiavano molto la struttura del progetto, purche' comunque non si avesse un totale stravolgimento di quanto fatto fino a quel punto.\\
 Dopo un'attenta analisi iniziale, sono stati estrapolati i casi d'uso principali dalle richieste del committente, da uno studio sull'utenza finale e basandosi sull'user story.\\
 L'analisi dei requisiti e' stata svolta insieme alla Project Manager, la quale a mantenuto i contatti con il responsabile d'azienda esterno per tutta la durata del progetto. Insieme a lei abbiamo stilato una lista di funzionalita' prioritarie e una lista, invece, di requisiti desiderabili e opzionali.
@@ -191,21 +191,150 @@ L'analisi dei requisiti e' stata svolta insieme alla Project Manager, la quale a
 	\label{fig:Diagramma dei casi d'uso generico relativo all'applicazione Cora' Parquet Live}
 \end{figure}
 
-Per quanto riguarda i requisiti, essi sono stati suddivisi in 3 categorie: requisiti obbligatori, requisiti opzionali e requisiti desiderabili.\\\\
-Segue ora una lista descrittiva dei principali requisiti. Il presente documento vuole garantire un discreto livello di dettaglio senza annoiare il lettore, per cui verranno elencate solo le funzionalita' principali.
+Per quanto riguarda i requisiti, essi sono stati suddivisi in 3 categorie: requisiti obbligatori, requisiti opzionali e requisiti desiderabili.\\
+Per quanto riguarda i requisiti opzionali, essi sono stati resi obbligatori dall'applicazione dei vincoli metodologici derivati dalle pratiche in uso aziendali.\\\\
+Segue ora una lista descrittiva dei principali requisiti. Il presente documento vuole garantire un discreto livello di dettaglio senza annoiare il lettore, per cui verranno elencate solo le funzionalita' principali.\\\\
 
 \textbf{Requisiti obbligatori:}
 
 \begin{itemize}
+	
+	\item L'applicazione deve eseguire una presentazione iniziale dell'avatar, il quale deve comparire dietro un ventaglio di legno che si apre e deve fare un breve discorso di apertura.
+	
+	\item L'applicazione deve rendere disponibile un tutorial iniziale che spieghi tutte le funzionalita' dell'app.
+	
 	\item L'applicazione deve dare la possibilita' all'utente di sfogliare una lista di categorie di prodotto, suddivise alla radice in  "Linea di prodotto" e "Colori", che permetteranno di accedere agli stessi prodotti in due modi diversi. La lista deve essere navigabile in entrambe le direzioni (da padre a figlio e da figlio a padre).
+	
+	\item Quando una linea di prodotto viene selezionata deve essere data la possibilita' all'utente di avviare una breve presentazione eseguita dall'avatar sulla linea di prodotto scelta. Questo comporta l'apparazione dell'avatar a schermo.
 	
 	\item L'applicazione deve dare la possibilita' all'utente di visualizzare i prodotti appartenenti a una certa categoria e deve dare la possibilita' di selezionarne uno da visualizzare in realta' aumentata.
 	
-	\item 
+	\item L'utente deve avere la possibilita' di selezionare un prodotto da una lista di prodotti e di visualizzarlo in realta' aumentata agganciato al tag. Alla selezione del prodotto deve, inoltre, essere disponibile la possibilita' di visualizzare la descrizione del prodotto scelto in un pannello appositamente creato.
+	
+	\item L'applicazione deve permettere, quando un prodotto e' selezionato e visibile in realta' aumentata, di effettuare modifiche sulla superficie coperta. In particolare, si vuole rendere disponibile all'utente la funzionalita' di pinch-to-scale sull'oggetto parquet.
+	
+	\item l'applicazione rende disponibile un menu' di "Credits" in cui e' possibile riavviare la presentazione iniziale, rivedere il tutorial, oppure collegarsi alla pagina di download tag, o alla pagina Facebook ufficiale di Cora' Divisione Parquet.
+	
+	\item L'applicazione deve dare la possibilita' all'utente di richiedere un preventivo online e di scattare uno screenshot della schermata visualizzata.
+	
+	\item L'applicazione deve contenere almeno i primi 30 prodotti inviati dall'azienda. 
+	
 \end{itemize}
+
+\textbf{Requisiti desiderabili:}
+
+\begin{itemize}
+	\item L'applicazione deve contenere i 21 prodotti inviati in seconda istanza.
+	
+	\item L'applicazione deve prevedere le gesture di "Swipe" per aprire e chiudere i menu'.
+	
+	\item Le texture dei prodotti devono utilizzare uno shader speculare per ottenere un'effetto piu lucido.
+	
+	\item La barra del menu' di navigazione deve essere ingrandita rispetto alla versione base del configuratore.
+	
+	\item Gli screenshot devono catturare solo la schermata principale con il prodotto in realta' aumentata, il pannellodescrittivo del prodotto e il logo di Cora' Divisione Parquet, niente altro.
+\end{itemize}
+
+Come gia' descritto in precedenza, i requisiti hanno visto modifiche anche sostanziali ad ogni iterazione, questo perche' la pratica adottata e' stata un'analisi iniziale seguita da una breve progettazione e da un intenso periodo di implementazione. Al termine di tale periodo, avveniva prima una verifica completa e poi compilata una demo ed inviata al cliente. Il cliente visionava l'app e inviava di ritorno al Project Manager un feedback con le criticita' e le migliorie da apportare. Seguiva, quindi un'ulteriore analisi dei requisiti ed iniziava un nuovo ciclo iterativo.\\\\
 
 
 \subsubsection{Progettazione}
+Nella metodologia Agile, la fase di progettazione e' la piu' importante e difficile da realizzare. Serve infatti molta esperienza per lavorare con una metodologia di questo tipo, in quanto il progetto si ritrova soggetto a continui cambiamenti. Risulta quindi difficile una progettazione solida e duratura, e non si ha il tempo necessario per entrare nel dettaglio, in quanto le ore previste per questa attivita' sono poche e frequenti.\\
+Come gia' detto in sezioni precedenti del documento, il configuratore da realizzare doveva partire da un modello di configuratore di base gia' realizzato e implementante un design pattern architetturale Model View Controller, per quanto Unity ne permetta un'implementazione limitata.\\
+I design pattern sono strumenti che aiutano a risolvere un certo tipo di problema comune. Quindi, e' necesseria la presenza di un problema per applicare un design pattern che lo risolva.\\
+Bisogna sottolineare il fatto che Unity si basa pesantemente attorno alle componenti o ai piu' noti "GameObject", ovvero gli oggetti di gioco, non c'e' modo di aggirare questa cosa.\\\\
+Segue ora una descrizione generica di come e' stato progettato il configuratore comprensivo delle funzionalita' offerte di base da un configuratore gia' realizzato e delle parti da me costruite.\\
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.1\textwidth]{\docsImg Class.png}
+	\caption{Diagramma delle classi generico}
+	\label{fig:Diagramma delle classi generico}
+\end{figure}
+\newpage
+
+In figura \ref{fig:Diagramma delle classi generico} si puo' notare come sia stata organizzata l'architettura dell'applicazione sulla base di cio' che era gia' stato realizzato. In particolare, necessita una spiegazione l'etimologia dei colori del diagramma:
+
+\begin{itemize}
+	\item \textbf{Giallo}: le classi colorate in giallo rappresentano classi gia' presenti e realizzate dai colleghi del reparto tecnico a cui non sono state apportate modifiche.
+	\item \textbf{Azzurro}: Le classi colorate di azzurro rappresentano le classi gia' implementate a cui pero' e' stata applicata una modifica non banale.
+	\item \textbf{Verde}: in verde le classi create da zero.
+\end{itemize}
+
+Come e' facile notare dal diagramma, il modello di gestione dei prodotti del configuratore era gia' implementato in una sorta di MVC. Il mio compito e' stato quello di adattare il codice gia' sviluppato perche' si prendesse carico dell'inserimento e della gestione di un nuovo tipo di contenuto. \\
+Inoltre, il mio compito principale riguardava la gestione dell'avatar all'interno dell'applicazione e la gestione delle gesture.
+
+\paragraph{Architettura generale}
+Da subito sono state definite quelle che avrebbero dovuto essere le entita' principali all'interno dell'applicazione, ovvero:
+
+\begin{itemize}
+	\item \textbf{Product}: Classe rappresentante il modello dati di un prodotto, avente il compito di memorizzare tutte le informazioni relative a un parquet, quali: nome, linea, categoria, finitura, codice, descrizione, essenza, scelta, superficie e dimensioni. Inoltre contiene il nome del padre del prodotto e uno sprite di dimensioni 300x300(px) da usare come icona.
+	
+	\item \textbf{ProductController}: Questa classe si occupa di istanziare l'oggetto 3D rappresentante il prodotto vero e proprio una volta che un prodotto viene selezionato. Il modello 3D viene caricato e istanziato runtime dalle risorse disponibili in base al nome dell'oggetto scelto, che quindi dovra' essere univoco tra i vari prodotti e contenere la stringa "\_3d" in coda.
+	
+	\item \textbf{HierarchyElement}: Classe che si occupa di gestire genitore e figli del prodotto preso in considerazione.
+	
+	\item \textbf{DataController}: Questa e' la classe centrale su cui si basa tutto il funzionamento del configuratore. Il compito di questa classe e' quello di gestire la gerarchia completa di prodotti, permettendo di impostare il nome e l'icona delle varie categorie, e di impostare i genitori e le icone di ogni prodotto. Tutto questo puo' essere gestito come plugin di Unity semplicemente attaccando lo script a un GameObject vuoto.
+	
+	\item \textbf{AvatarPositionController}: Classe principale di gestione e controllo dell'avatar. Qui viene gestito il posizionamento dell'avatar: all'avviod ell'applicazione l'avatar viene posizionato sopra il tag ad una grandezza fissata, successivamente, una volta terminata la presentazione iniziale, l'avatar viene spostato e fissato a schermo in una posizione laterale e non troppo ingombrante. Quando l'avatar e' fissato a schermo ha una scala posta a zero, mentre viene ingrandito una volta richiamato tramite apposito pulsante. Questo script si occupa anche di gestire la posizione e l'apparizione del ventaglio iniziale per poi invocare il metodo dedicato alla presentazione vera e propria dell'avatar.
+	
+	\item \textbf{StartController}: E' la classe che si occupa di gestire la presentazione iniziale dell'avatar. Qui vengono caricati i file audio e temporizzati con l'inizio delle animazioni. La classe si occupa di gestire sia l'avviosia il termine (anche richiesto dall'utente) dell'applciazione.
+	
+	\item \textbf{SpeakerAndAnimationController}: Classe realizzata con lo scopo di gestire l'avatar in modo da fargli presentare le categorie tramite animazioni e file audio. Non era conosciuto a priori il numero di animazioni che si sarebbero dovute implementare per cui questa classe doveva essere progettata in modo da gestire un numero indefinito di animazioni e file audio.
+	
+	\item \textbf{PinchToScale}: Questa classe non si occupa di riconoscere la gesture, compito dedicato a una classe sviluppata da terzi, ma si occupa di definire il comportamento quando viene rilevata una particolare gesture sul modello 3D del prodotto.
+	
+	\item \textbf{SwipeManager}: Questa classe, come la precedente, non e' un riconoscitore di gesture ma un gestore che si occupa di definirne il comportamento. Lo SwipeManager deve aprire e chiudere i menu' in pase al tipo di swipe effettuato.
+	
+	\item \textbf{ScreenshotManager}: Si occupa di gestire la cattura e il salvataggio della schermata visualizzata dul display. Lo script si affita all'utilizzo di classi dedicate sviluppate da terzi e ha il compito di gestire cosa deve essere visualizzato nello screenshot.
+	
+	\item \textbf{CoraMailBuilder}: E' lo script che si occupa della creazioen della mail di richiesta preventivo su un determinato prodotto
+	
+	\item \textbf{LevelBehaviour}: Questa classe si occupa di popolare il menu' inferiore dell'applicazione, creando i pulsanti per ogni categoria e i pulsanti relativi ai prodotti.
+\end{itemize}
+
+Questi sono gli script principali utilizzati nella realizzazione del progetto. Come gia' detto, sono stati creati altri script piu' dedicati e di rifinitura, la cui spiegazione in dettaglio non fara' parte di questo documento per non appesentirne la lettura.\\\\
+
+\paragraph{Layout e GUI}
+Per quanto riguarda la GUI dell'applicazione, essa e' stata progettata da terzi per conto di Cora' Divisione Parquet e mi e' stata inviata tramite un file PSD contenente le grafiche da utilizzare e il layout a cui adeguarsi.\\
+Il layout e' stato scelto sulla base dei configuratori precedentemente utilizzati ed e' stato adattato per il progetto specifico.
+
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=1\textwidth]{\docsImg layout1.jpg}}
+	\caption{Layout con menu' info aperto}
+	\label{fig:Layout con menu' info aperto}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\fbox{\includegraphics[width=1\textwidth]{\docsImg layout2.jpg}}
+	\caption{Layout con menu inferiore aperto}
+	\label{fig:Layout con menu inferiore aperto}
+\end{figure}
+\newpage
+Di seguito vengono spiegati i componenti principali della GUI.
+
+\begin{itemize}
+	\item \textbf{Logo}: il logo e' un pulsante cliccabile che apre il menu' dei Credits nel centro dello schermo;
+	\item \textbf{Menu' inferiore}:
+\end{itemize}
+
+In questo capitolo ho avuto voce, in quanto ho potuto esprimere il mio dissenso su alcune scelte relative all'usabilita' dell'applicazione mantenedo un certo tipo di layout. Queste osservazioni e richiesta di modifica della grafica sono state concordate prima dal Project manager e successivamente dal cliente. Le modifiche osservate e accolte sono state:
+
+\begin{itemize}
+	\item Grandezza del pannello delle informazioni laterali. Essendo troppo piccolo risulatava inutilizzabile da smartphone.
+	\item Stile dell'icona dell'applicazione che risultava poco leggibile.
+\end{itemize}
+
+Inoltre, ho proposto l'utilizzo di un tag di grandezza A3, al posto del foglio A4 utilizzato per ottenere un miglior risultato di agganciamento del tag e di tracking. Questa richiesta non e' stata accolta in quanto si presuppone la stampa domestica del tag in assenza di possibilita' di stampare fogli A3.\\
+
+
+\paragraph{Animator Controller}
+Gli Animator Controller sono i gestori delle animazioni di un GameObject in Unity. Generalmente, ogni oggetto chesi vuole animare ha attaccato un Animator con associato un Animator Controller che ne definisce il comportamento. In questo progetto, tali componenti hanno avuto un ruolo fondamentale, per cui e' stata necessaria un'attenta progettazione di queste componenti.\\
+In questo paragrafo verranno tralasciate le spiegazioni degli Animation Controller banali.\\
+
 \subsubsection{Implementazione}
 \subsubsection{Verifica e validazione}
 
