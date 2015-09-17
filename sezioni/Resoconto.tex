@@ -98,8 +98,7 @@ PhotonNetwork.JoinRoom("RoomName");
 
 	\item \textbf{Creare una stanza}: per creare una stanza basta fornire il nome, dare la possibilita' o meno di essere trovata da altri utenti, fornire la possibilita' agli altri di entrare, e il numero massimo di giocatori.
 \begin{lstlisting}
-public void OnConnectedToMaster()
-{
+public void OnConnectedToMaster(){
 	PhotonNetwork.CreateRoom("RoomName", true, true, 4);
 }
 
@@ -314,18 +313,25 @@ Il layout e' stato scelto sulla base dei configuratori precedentemente utilizzat
 	\label{fig:Layout con menu inferiore aperto}
 \end{figure}
 \newpage
-Di seguito vengono spiegati i componenti principali della GUI.
+Di seguito vengono descritti i componenti principali della GUI.
 
 \begin{itemize}
 	\item \textbf{Logo}: il logo e' un pulsante cliccabile che apre il menu' dei Credits nel centro dello schermo;
-	\item \textbf{Menu' inferiore}:
+	\item \textbf{Menu' inferiore}: contiene la lista delle categorie, con eventualmente la relativa icona, e la lista dei prodotti come figli della propria categoria madre. Il menu' e' composto da una "breadcumb" navigabile, e da una sequenza di bottoni assegnati ognuno ad una categoria, e nei livelli piu' profondi ai prodotti.
+	\item \textbf{Pannello Info}: e' un pannello laterale che compare dopo la pressione del pilsante "i". Il pulsante in questione diventa visibile solo quando un prodotto e' selezionato e permette di aprire la sezione relativa alla descrizione del prodotto. Il pannello si compone anche di un pulsante per l'acquisizione di screenshot e un pulsante per la richiesta di preventivo del prodotto visualizzato.
+	\item \textbf{Pulsante animazione}: e' un pulsante a forma di fumetto situato nella parte a est dello schermo, e diventa visibile ogni volta che l'avatar ha qualcosa da dire. Nello specifico, compare quando viene selezionata una categoria interna alle "linee di prodotto", e scompare negli altri casi. La comparsa e' seguita da un'animazione di notifica per richiamare l'attenzione dell'utente. Una volta rpemuto il pulsante, compare l'avatar nella parte ovest dello schermo iniziando l'animazione dedicata.
+	\item \textbf{Scope}: mirino posizionato al centro dello schermo e utilizzato per fornire brevi istruzioni all'utente su cosa fare e dare la possibilita' all'utente di scaricare il tag, oltre al fatto di eseguire la sua funzionalita' principale di supporto per mirare il tag.
 \end{itemize}
 
-In questo capitolo ho avuto voce, in quanto ho potuto esprimere il mio dissenso su alcune scelte relative all'usabilita' dell'applicazione mantenedo un certo tipo di layout. Queste osservazioni e richiesta di modifica della grafica sono state concordate prima dal Project manager e successivamente dal cliente. Le modifiche osservate e accolte sono state:
+L'apertura del menu', dei credits e del pannello laterale non e' mutualmente esclusiva, in quanto tutte e tre le componenti possono essere visibili in stato aperto contemporaneamente senza interferire tra di loro.\\
+
+
+In questo capitolo ho avuto voce, in quanto ho potuto esprimere il mio dissenso su alcune scelte relative all'usabilita' dell'applicazione mantenedo un certo tipo di layout. Queste osservazioni e richieste di modifica della grafica sono state concordate prima con Project manager e successivamente con il cliente. Le modifiche osservate e accolte sono state:
 
 \begin{itemize}
 	\item Grandezza del pannello delle informazioni laterali. Essendo troppo piccolo risulatava inutilizzabile da smartphone.
 	\item Stile dell'icona dell'applicazione che risultava poco leggibile.
+	\item Posizione del pulsante animazione. Inizialmente posto nella parte superiore dello schermo, risultava difficile da raggiungere con un'impugnatura standard del device.
 \end{itemize}
 
 Inoltre, ho proposto l'utilizzo di un tag di grandezza A3, al posto del foglio A4 utilizzato per ottenere un miglior risultato di agganciamento del tag e di tracking. Questa richiesta non e' stata accolta in quanto si presuppone la stampa domestica del tag in assenza di possibilita' di stampare fogli A3.\\
@@ -335,7 +341,177 @@ Inoltre, ho proposto l'utilizzo di un tag di grandezza A3, al posto del foglio A
 Gli Animator Controller sono i gestori delle animazioni di un GameObject in Unity. Generalmente, ogni oggetto chesi vuole animare ha attaccato un Animator con associato un Animator Controller che ne definisce il comportamento. In questo progetto, tali componenti hanno avuto un ruolo fondamentale, per cui e' stata necessaria un'attenta progettazione di queste componenti.\\
 In questo paragrafo verranno tralasciate le spiegazioni degli Animation Controller banali.\\
 
+\begin{itemize}
+	\item \textbf{Info Panel Controller}: controller dedicato al pannello laterale per gestire le animazioni entrata, uscita e di oscurazione del pulsante "i". Esempio utile per capire come ogni oggetto della GUI e' stato gestito in modo simile. Ogni animazione viene fatta partire al cambio di stato di un valore booleano oppure all'azionamento di un particolare trigger.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\textwidth]{\docsImg InfoPanelController.png}
+		\caption{Animator Controller del pannello Info laterale}
+		\label{fig:Animator Controller del pannello Info laterale}
+	\end{figure}
+	
+	Nel dettaglio: INFO\_DEF nasconde sia pannello che pulsante, INFO\_HIDE mostra il pulsante "i", INFO\_SHOW apre il pannello su schermo, INFO\_SHOT, rimuove gli elementi della GUI indesiderati per l'esecuzione di uno screenshot.
+	
+	\item \textbf{Avatar Speaker Controller}: dedicato alla gestione della presentazione iniziale da parte dell'avatar e alle animazioni relative alla spiegazione delle categorie.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{\docsImg AvatarSpeakerController.png}
+		\caption{Animator Controller dell'avatar}
+		\label{fig:Animator Controller dell'avatar}
+	\end{figure}
+	
+	Nel dettaglio: IDLE e' lo stato iniziale, a cui l'avatar ritorna alla fine di ogni presentazione. Lo stato PRESENTATION e' un particolare stato in cui l'animator viene portato nel momento in cui si vuole avviare la presentazione iniziale. Questo stato termina poi con il passaggio a END\_PRESENTATION che e' uno stato necessario per effettuare alcuni controlli da codice, come controllare che la presentazione sia terminata. Lo stesso viene fatto con le n categorie di prodotti di cui si ha la presentazione.\\ Questo animator poteva essere implementato in modo piu' efficiente caricando l'animazione da fare partire di volta in volta in base a una stringa passata. Avendo tempo limitato si e' preferito procedere per una strada di facile implementazione come questa.
+\end{itemize}
+
+
+
+
+
+
 \subsubsection{Implementazione}
+L'attivita' di implementazione e di codifica si e' svolta secondo quanto previsto dalla metodologia Agile. Le fasi di codifica non son avvenute in un unico round, ma in brevi e frequenti blocchi di tempo. Per prima cosa, sono state implementate le parti principali del sistema, cioe' le parti che quasi sicuramente non avrebbero avuto modifiche nelle successive iterazioni.\\
+
+Si e' proceduto, in primo luogo, con l'adattamento di quanto disponibile nel configuratore base. In particolare e' stata creata una classe Product in grado di contenere tutte le informazioni necessarie per ogni prodotto.\\
+
+\paragraph{Pinch-To-Scale}
+E' stata richiesta la possibilita' di espandere il parquet mostrato in realta' aumentata direttamente runtime tramite l'applicazione di una gesture dedicata.\\
+Bisogna premettere che le texture dei parquet sono state recapitate simulandone la grandezza reale per cui, data anche l'irregolarita' di alcuni parquet, era difficile fare il tiling (ripetizione della texture su uno o piu'assi) della texture.\\
+Su suggerimento del CTO si e' deciso di procedere mantenedo la dimensione reale della texture, senza tiling, e applicando una maschera ridimensionabile all'oggetto in modo tale da visualizzarne solo una parte. La realizzazioen e' stata affidata completamente a me.\\
+E' stata realizzata una maschera a forma di cornice, unendo piu' oggetti tridimensionali prefabbricati. A tale maschera e' stato poi applicato un particolare shader in grado di rimuovere il rendering delle parti di texture coperte dalla maschera.\\
+Di seguito e' illustrata la codifica relativa allo script PinchToScale.cs.
+
+\begin{lstlisting}
+
+public class PinchToScale : MonoBehaviour
+{
+public Vector3 scaleWeights = Vector3.one;
+public float minScaleAmount = 0.4f;
+public float maxScaleAmount = 4.0f;
+public float sensitivity = 0.3f;		// augment for a bigger scaling
+public float smoothingSpeed = 12.0f;    // set to 0 to disable smoothing
+public GameObject mask;
+
+private float idealScaleAmount = 0.4f;
+private float scaleAmount = 0.4f;
+private Vector3 baseScale = Vector3.one;
+
+public float ScaleAmount
+{
+	get { return scaleAmount; }
+	
+	set 
+	{ 
+		value = Mathf.Clamp( value, minScaleAmount, maxScaleAmount );	//check if the value is between limits
+		
+		if( value != scaleAmount )
+		{
+			scaleAmount = value;
+			
+			Vector3 s = scaleAmount * baseScale;
+			s.x *= scaleWeights.x;
+			s.y *= scaleWeights.y;
+			s.z *= scaleWeights.z;
+			
+			mask.transform.localScale = s;			//resize the mask scale
+		}
+	}
+}
+
+public float IdealScaleAmount
+{
+	get { return idealScaleAmount; }
+	set { idealScaleAmount = Mathf.Clamp( value, minScaleAmount, maxScaleAmount ); }
+}
+
+void Start()
+{
+	baseScale = transform.localScale;
+	IdealScaleAmount = ScaleAmount;
+}
+
+void Update()
+{
+	if (smoothingSpeed > 0) {
+		ScaleAmount = Mathf.Lerp (ScaleAmount, IdealScaleAmount, Time.deltaTime * smoothingSpeed);
+	} else {
+	ScaleAmount = IdealScaleAmount;
+}
+}
+
+void OnPinch( PinchGesture gesture )
+{  
+	IdealScaleAmount += sensitivity * gesture.Delta.Centimeters();
+} 
+\end{lstlisting}
+
+Il codice, all'avvio dello script, memorizza la scala locale dell'oggetto, e imposta il valore di scaling ideale allo scaling di base. Ad ogni frame viene aggiornato, internamente al metodo Update, lo scaling attuale, sia nel caso sia presente un effetto di smooth sia altrimenti. Quando viene catturata una gesture di Pinch, ne viene presa l'ampiezza in centimetri e moltiplicata per la sensibilita' che gli si vuole dare allo scaling rispetto alla gesture. Questo valore calcolato viene memorizzato in IdealScaleAmount che nel successivo Update sara' memorizzato come nuovo valore di ScaleAmount. ScaleAmount ogni volta che viene modificato si occupa di applicare lo scaling impostato alla maschera passata come parametro da Unity.\\\\
+
+
+\paragraph{Inserimento prodotti}
+Successivamente ho proceduto con l'inserimento dei primi 20 prodotti, in quanto il modello e la gestione delle categorie e dei prodotti era gia' implementata. Per ogni prodotto, prima si e' dovuta importare negli assets la relativa texture e icona, poi, dopo aver attaccato uno script Product al prodotto comprensivo del modello 3D, questo veniva processato in uno script (VariationMaker.cs) che creava 2 oggetti: un GameObject contenente le informazioni del prodotto da utilizzare nello script di gestione dei dati (DataController.cs) e un GameObject con il modello 3D.\\
+
+\paragraph{Gestione dell'avatar}
+Come gia' accennato, il grosso del lavoro consistava nell'implementazione di un avatar all'interno dell'applicazione. Per prima cosa e' stato gestita la presentazione iniziale composta da 4 file di animazione e 4 file audio. E' stata usata la tecnica del lip sync per ottenere un effetto realistico. Di cio' se ne e' occupato lo StartController sviluppato appositamente.\\
+Lo StartController e' stato implementato utilizzando il design pattern Singleton in quanto era necessario avere al piu' un'istanza della classe.\\
+
+All'avvio dello StartController vengono caricati in memoria gli audio file relativi alla presentazione. Durante ogni ciclo di Update, invece, viene controllato lo stato dell'animazione corrente e il numero contenuto all'interno di un particolare contatore. In questo modo e' possibile eseguire nell'ordine corretto i vari pezzi ottenendo, cosi, l'animazione completa, senza che venga ciclata piu' volte essendo che il contatore procede verso un'unica direzione incrementale e viene ripristinato solo quando si vuole riavviare la presentazione.\\
+
+Di seguito viene mostrata la codifica del metodo Awake() che si occupa del caricamento dei file audio.
+\begin{lstlisting}
+	void Awake() {
+		_instance = this;
+		pt1 = (AudioClip)Resources.Load ("Speakeraggio/01_Presentazione1", typeof(AudioClip));
+		pt2 = (AudioClip)Resources.Load ("Speakeraggio/02_Presentazione2", typeof(AudioClip));
+		pt3 = (AudioClip)Resources.Load ("Speakeraggio/03_Presentazione3", typeof(AudioClip));
+		pt4 = (AudioClip)Resources.Load ("Speakeraggio/04_Presentazione4", typeof(AudioClip));
+	}
+\end{lstlisting}
+
+E il metodo Update() che si occupa della gestione delle animazioni e della sincronizzazione con i file audio. Inoltre si puo' notare come venga reso disponibile un pulsante "Skip" per saltare la presentazione.
+\begin{lstlisting}
+	void Update(){
+		if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("01_Presentazione1") && startLock == 1) {
+			presentationAudio.clip = pt1;
+			presentationAudio.Play();
+			skipButton.SetActive(true);
+			skipButton.GetComponent<Animator> ().SetBool ("Show", true);
+			startLock++;
+		}
+		if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("02_Presentazione2") && startLock == 2) {
+			presentationAudio.clip = pt2;
+			presentationAudio.Play();
+			startLock++;
+		}
+		if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("03_Presentazione3") && startLock == 3) {
+			presentationAudio.clip = pt3;
+			presentationAudio.Play();
+			startLock++;
+		}
+		if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("04_Presentazione4") && startLock == 4) {
+			presentationAudio.clip = pt4;
+			presentationAudio.Play();
+			startLock++;
+		}
+		if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("EndPresentation") && startLock == 5) {
+			EndPresentation ();
+			startLock = 1;
+		}
+	
+	}
+\end{lstlisting}
+
+Il passo di implementazione successivo e' stato la gestione della posizione dell'avatar. All'inizio doveva risultare agganciato al tag per poi spostarsi e rimanere agganciato alla parte ovest dello schermo, comparendo solo su richiesta.\\
+Questo script e' quello che piu' ha usufruito della metofologia Agile, e in particolare quello che ha subito piu' incrementi nelle varie iterazioni.\\
+Questo perche' il cliente, non essendo un esperto di realta' aumentata e, soprattutto di applicazioni Android, non aveva un'idea precisa di come e dove dovesse apparire l'avatar. Per cui sono state richieste numerose prove per ottenere il risultato che piu' rendesse felice il cliente.\\
+In iterazioni intermedie era sta prevista persino un'interessante funzionalita' per cui il device calcolava l'altezza rispetto al tag e modificava la grandezza dell'avatar per una visione "da alzati" e una "da seduti". Questa funzionalita' da me realizzata e' piaciuta molto al team di sviluppo ma e' stata bocciata dal cliente finale che, alla fine, e' stato convinto del Project Manager della soluzione ottimale con avatar di grandezza fissa.\\
+Questo script e' fondamentale perche' gestisce le animazioni dei vari componenti che agiscono nella presentazione iniziale e le sincronizza per ottenere il miglior effetto visivo.\\\\
+
+
+
+
+
 \subsubsection{Verifica e validazione}
 
 \subsection{Livello di completezza raggiunto}

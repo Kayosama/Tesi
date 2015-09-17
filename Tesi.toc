@@ -49,16 +49,19 @@
 \contentsline {subsubsection}{\numberline {4.3.3}Progettazione}{33}{subsubsection.4.3.3}
 \contentsline {paragraph}{\numberline {4.3.3.1}Architettura generale}{35}{paragraph.4.3.3.1}
 \contentsline {paragraph}{\numberline {4.3.3.2}Layout e GUI}{36}{paragraph.4.3.3.2}
-\contentsline {paragraph}{\numberline {4.3.3.3}Animator Controller}{38}{paragraph.4.3.3.3}
-\contentsline {subsubsection}{\numberline {4.3.4}Implementazione}{38}{subsubsection.4.3.4}
-\contentsline {subsubsection}{\numberline {4.3.5}Verifica e validazione}{38}{subsubsection.4.3.5}
-\contentsline {subsection}{\numberline {4.4}Livello di completezza raggiunto}{38}{subsection.4.4}
-\contentsline {section}{\numberline {A}Realta' Aumentata}{39}{appendix.Alph1}
-\contentsline {section}{Glossario}{41}{section*.12}
-\contentsline {subsection}{A}{41}{section*.13}
-\contentsline {subsection}{B}{41}{section*.16}
-\contentsline {subsection}{C}{41}{section*.19}
-\contentsline {subsection}{G}{41}{section*.22}
-\contentsline {subsection}{P}{42}{section*.25}
-\contentsline {subsection}{R}{42}{section*.28}
-\contentsline {subsection}{S}{42}{section*.31}
+\contentsline {paragraph}{\numberline {4.3.3.3}Animator Controller}{39}{paragraph.4.3.3.3}
+\contentsline {subsubsection}{\numberline {4.3.4}Implementazione}{40}{subsubsection.4.3.4}
+\contentsline {paragraph}{\numberline {4.3.4.1}Pinch-To-Scale}{40}{paragraph.4.3.4.1}
+\contentsline {paragraph}{\numberline {4.3.4.2}Inserimento prodotti}{42}{paragraph.4.3.4.2}
+\contentsline {paragraph}{\numberline {4.3.4.3}Gestione dell'avatar}{42}{paragraph.4.3.4.3}
+\contentsline {subsubsection}{\numberline {4.3.5}Verifica e validazione}{44}{subsubsection.4.3.5}
+\contentsline {subsection}{\numberline {4.4}Livello di completezza raggiunto}{44}{subsection.4.4}
+\contentsline {section}{\numberline {A}Realta' Aumentata}{45}{appendix.Alph1}
+\contentsline {section}{Glossario}{47}{section*.12}
+\contentsline {subsection}{A}{47}{section*.13}
+\contentsline {subsection}{B}{47}{section*.16}
+\contentsline {subsection}{C}{47}{section*.19}
+\contentsline {subsection}{G}{47}{section*.22}
+\contentsline {subsection}{P}{48}{section*.25}
+\contentsline {subsection}{R}{48}{section*.28}
+\contentsline {subsection}{S}{48}{section*.31}
