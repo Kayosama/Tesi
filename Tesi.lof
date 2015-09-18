@@ -14,7 +14,7 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Utilizzo dei sistemi operativi mobile nel secondo quarto del 2014 (dato fornito da Net Applications)}}{16}{figure.11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Versione base di Unity}}{18}{figure.12}
 \contentsline {figure}{\numberline {13}{\ignorespaces Diagramma di Gantt delle attivita'}}{21}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del tutorial riguardante l'animazione di un avatar 3D di cui successivamente e' stato eseguito il porting su Android}}{24}{figure.14}
+\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del tutorial riguardante l'animazione di un avatar 3D di cui successivamente \`e stato eseguito il porting su Android}}{24}{figure.14}
 \contentsline {figure}{\numberline {15}{\ignorespaces Architettura generale del framework Photon Unity Networking}}{26}{figure.15}
 \contentsline {figure}{\numberline {16}{\ignorespaces Schermata iniziale di Call Of Toony con Lobby}}{27}{figure.16}
 \contentsline {figure}{\numberline {17}{\ignorespaces Call Of Toony - multiplayer su device diversi}}{28}{figure.17}
@@ -25,4 +25,11 @@
 \contentsline {figure}{\numberline {22}{\ignorespaces Layout con menu inferiore aperto}}{37}{figure.22}
 \contentsline {figure}{\numberline {23}{\ignorespaces Animator Controller del pannello Info laterale}}{39}{figure.23}
 \contentsline {figure}{\numberline {24}{\ignorespaces Animator Controller dell'avatar}}{40}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Esempio di realta' aumentata}}{45}{figure.25}
+\contentsline {figure}{\numberline {25}{\ignorespaces Presentazione iniziale}}{43}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Presentazione iniziale - Ventaglio di legno in apertura}}{49}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Presentazione iniziale - Avatar}}{49}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Tutorial - Istruzioni}}{50}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Configuratore - Menu' inferiore aperto e Avatar in presentazione}}{50}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Configuratore - Pannello info aperto}}{51}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Configuratore - Menu' dei Credits aperto}}{51}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Esempio di realta' aumentata}}{52}{figure.32}
