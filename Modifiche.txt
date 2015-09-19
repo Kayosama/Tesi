@@ -1,0 +1,10 @@
+Dovrai rivedere con molta attenzione gli aspetti sintattici e grammaticali; 
+tra le altre cose, troverai che moltissime virgole sono mal poste o mancanti. 
+Userai i verbi in forma attiva e personale; eliminerai di conseguenza tutte le (numerosissime) inversioni, in cui i verbi sono al passivo e in forma impersonale. 
+(Per capirci: "ho fatto" e non "si è fatto"; "qualcuno/qualcosa descrive" e non "si descrive".)
+Verifica e validazione _non_ sono un'unica attività e presentandole insieme, "schiacci" la verifica verso la fine delle attività, 
+che non è cosa buona. Inoltre, i contenuti di §3.3.5 (scarsi) si limitano ai test, che -- a rigore -- sono solo una parte delle attività di V&V;
+manca del tutto una visione di sintesi dell'ampiezza e della profondità delle attività di V&V e dei risultati di copertura ottenuti.
+§3.4 è deludente, fornisci un numero senza mostrare da dove lo derivi e non fornisci una visione d'insieme del prodotto realizzato.
+Il capitolo 4 è solo una bozza, superficiale, e deludente.
+Userai una convenzione tipografica per i termini in inglese (p.es., corsivo) e anche per i termini che meritano una voce di glossario.

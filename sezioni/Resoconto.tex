@@ -10,7 +10,7 @@ La dislocazione temporale delle attivita \`e stata rappresentata graficamente in
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{\docsImg Gantt.png}
+	\includegraphics[width=1.1\textwidth]{\docsImg Gantt.png}
 	\caption{Diagramma di Gantt delle attivita'}
 	\label{fig:Diagramma di Gantt delle attivita}
 \end{figure}
@@ -241,19 +241,19 @@ Come gi\`a descritto in precedenza, i requisiti hanno visto modifiche anche sost
 Nella metodologia Agile, la fase di progettazione \`e la pi\`u importante e difficile da realizzare. Serve infatti molta esperienza per lavorare con una metodologia di questo tipo, in quanto il progetto si ritrova soggetto a continui cambiamenti. Risulta quindi difficile una progettazione solida e duratura, e non si ha il tempo necessario per entrare nel dettaglio, in quanto le ore previste per questa attivit\`a sono poche e frequenti.\\
 Come gi\`a detto in sezioni precedenti del documento, il configuratore da realizzare doveva partire da un modello di configuratore di base gi\`a realizzato e implementante un design pattern architetturale Model View Controller, per quanto Unity ne permetta un'implementazione limitata.\\
 I design pattern sono strumenti che aiutano a risolvere un certo tipo di problema comune. Quindi, \`e necesseria la presenza di un problema per applicare un design pattern che lo risolva.\\
-Bisogna sottolineare il fatto che Unity si basa pesantemente attorno alle componenti o ai pi\`u noti "GameObject", ovvero gli oggetti di gioco, non c'\`e modo di aggirare questa cosa.\\\\
-Segue ora una descrizione generica di come \`e stato progettato il configuratore comprensivo delle funzionalit\`a offerte di base da un configuratore gi\`a realizzato e delle parti da me costruite.\\
+Bisogna sottolineare il fatto che Unity si basa pesantemente attorno alle componenti o ai pi\`u noti "GameObject", ovvero gli oggetti di gioco e non c'\`e modo di aggirare questa cosa.\\\\
+Segue ora una descrizione di come \`e stato progettato il configuratore comprensivo delle funzionalit\`a di base offerte da un configuratore gi\`a realizzato e delle parti da me costruite.\\
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.1\textwidth]{\docsImg Class.png}
 	\caption{Diagramma delle classi generico}
-	\label{fig:Diagramma delle classi generico}
+	\label{fig:Diagramma delle classi}
 \end{figure}
 \newpage
 
-In figura \ref{fig:Diagramma delle classi generico} si pu\`o notare come sia stata organizzata l'architettura dell'applicazione sulla base di ci\`o che era gi\`a stato realizzato. In particolare, necessita una spiegazione l'etimologia dei colori del diagramma:
+In figura \ref{fig:Diagramma delle classi} si pu\`o notare come sia stata organizzata l'architettura dell'applicazione sulla base di ci\`o che era gi\`a stato realizzato. In particolare, necessita una spiegazione l'etimologia dei colori del diagramma:
 
 \begin{itemize}
 	\item \textbf{Giallo}: le classi colorate in giallo rappresentano classi gi\`a presenti e realizzate dai colleghi del reparto tecnico a cui non sono state apportate modifiche.
@@ -380,7 +380,9 @@ E' stata richiesta la possibilit\`a di espandere il parquet mostrato in realt\`a
 Bisogna premettere che le texture dei parquet sono state recapitate simulandone la grandezza reale per cui, data anche l'irregolarit\`a di alcuni parquet, era difficile fare il tiling (ripetizione della texture su uno o pi\`uassi) della texture.\\
 Su suggerimento del CTO si \`e deciso di procedere mantenedo la dimensione reale della texture, senza tiling, e applicando una maschera ridimensionabile all'oggetto in modo tale da visualizzarne solo una parte. La realizzazioen \`e stata affidata completamente a me.\\
 E' stata realizzata una maschera a forma di cornice, unendo pi\`u oggetti tridimensionali prefabbricati. A tale maschera \`e stato poi applicato un particolare shader in grado di rimuovere il rendering delle parti di texture coperte dalla maschera.\\
-Di seguito \`e illustrata la codifica relativa allo script PinchToScale.
+Di seguito \`e illustrata la codifica relativa allo script PinchToScale.\\
+\noindent
+\textbf{1. PinchToScale.cs}
 
 \begin{lstlisting}
 
@@ -468,6 +470,8 @@ Lo StartController \`e stato implementato utilizzando il design pattern Singleto
 All'avvio dello StartController vengono caricati in memoria gli audio file relativi alla presentazione. Durante ogni ciclo di Update, invece, viene controllato lo stato dell'animazione corrente e il numero contenuto all'interno di un particolare contatore. In questo modo \`e possibile eseguire nell'ordine corretto i vari pezzi ottenendo, cosi, l'animazione completa, senza che venga ciclata pi\`u volte essendo che il contatore procede verso un'unica direzione incrementale e viene ripristinato solo quando si vuole riavviare la presentazione.\\
 
 Di seguito viene mostrata la codifica del metodo Awake() che si occupa del caricamento dei file audio.
+\\\\
+\textbf{2. StartController.cs - Metodo Awake()}
 \begin{lstlisting}
 	void Awake() {
 		_instance = this;
@@ -479,6 +483,8 @@ Di seguito viene mostrata la codifica del metodo Awake() che si occupa del caric
 \end{lstlisting}
 
 E il metodo Update() che si occupa della gestione delle animazioni e della sincronizzazione con i file audio. Inoltre si pu\`o notare come venga reso disponibile un pulsante "Skip" per saltare la presentazione.
+\\\\
+\textbf{3. StartController.cs - Metodo Update()}
 \begin{lstlisting}
 	void Update(){
 		if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("01_Presentazione1") && startLock == 1) {
@@ -520,7 +526,8 @@ Questo script \`e fondamentale perch\`e gestisce le animazioni dei vari componen
 L'ultimo script realizzato per il controllo dell'avatar \`e lo script che si occupa di gestire le presentazioni delle varie categorie, chiamato SpeakerAndAnimationController. Nel dettaglio, il pulsante di una categoria invoca, alla pressione, un metodo chiamato SetPresentation(string) che si occupa di caricare in memoria l'audio corrispondente effettuando una ricerca per nome negli assets. Nel caso la ricerca termini correttamente viene mostrato il pulsante animazione (pulsante a forma di fumetto), altrimenti viene nascosto, se gi\`a visibile, o non mostrato.\\
 Alla pressione del pulsante animazione viene invocato un metodo dedicato allo start e allo stop della presentazione. In particolare, se esiste gi\`a un'audio e un'animazione in esecuzione da parte dell'avatar, e viene premuto tale pulsante, l'animazione viene fermata. Se invece  non \`e presente alcuna presentazione in esecuzione, viene fatto partire l'audio in memoria con la relativa animazione, facendo comparire l'avatar con un effetto di scaling.\\
 E' utile osservare il funzionamento del metodo Update() per capire come avviene la sincronizzazione tra audio e animazione.
-
+\\\\
+\textbf{4. SpeakerAndAnimationController.cs - Metodo Update()}
 \begin{lstlisting}
 void Update(){
 	if (avatarController.GetCurrentAnimatorStateInfo (0).IsName ("EndSpeech")) {
@@ -552,7 +559,7 @@ Come ultimo passo di implementazione, ho proceduto con la creazione del tutorial
 Contestualmente all'applicazione sviluppata, i principali test svolti hanno riguardato il corretto funzionamento di tutte le funzionalit\`a rese disponibili. L'attivit\`a di verifica e validazione \`e stata svolta quasi totalmente da alcuni colleghi del team tecnico e dal Project Manager, che hanno potuto valutare, durante tutto lo svolgimento del progetto, la correttezza dei componenti da me sviluppati.\\
 I test avvenuti hanno avuto sempre esito positivo riguardo il corretto funzionamento dei componenti e hanno portato alla luce piccoli bug prontamente corretti.\\
 Oltre ai test interni, ad ogni iterazione veniva fornita l'app a un responsabile esterno dell'azienda Cor\`a Divisione Parquet, che aveva il compito di effettuare ulteriori test sulla qualit\`a del prodotto e doveva verificare la corrispondenza di funzionalit\`a tra le aspettative e l'applicazione reale.\\
-I feedback da parte del cliente sono sempre stati positivi su quanto sviluppato, tranne per il lavoro svolto sull'avatar che, almeno inizialmente, non corrispondeva alle loro aspettative. Con successive iterazioni si \`e riuscito a ottenere un effetto ottimale dell'avatar che portasse soddisfazione al cliente.\\
+I feedback da parte del cliente sono sempre stati positivi su quanto sviluppato, tranne per il lavoro svolto sull'avatar che, almeno inizialmente, non corrispondeva aa quanto si aspettavano. Con successive iterazioni sono riuscito riuscito ad ottenere un effetto ottimale dell'avatar che portasse soddisfazione al cliente.\\
 I device utilizzati per il testing dell'applicazione sono stati:
 
 \begin{itemize}
@@ -564,4 +571,6 @@ I device utilizzati per il testing dell'applicazione sono stati:
 Per quanto riguarda, invece, il testing dell'app durante l'attivit\`a di implementazione, \`e stato usato un plugin di Vuforia per Unity che permette l'utilizzo di una webcam per simulare la fotocamera dei device.
 
 \subsection{Livello di completezza raggiunto}
-Alla fine del tempo di stage si pu\`o stimare un completamento del progetto intorno circa al 98\% rispetto al totale, in quanto l'ultima richiesta da parte del cliente prima della pubblicazione dell'app \`e stata quella di implementare il follow di occhi e testa dell'avatar rispetto alla telecamera. Questo ultimo aspetto \`e stato sviluppato interamente da uncollega del reparto tecnico dopo la conclusione del mio stage.
+In definitiva, e' stata realizzata un'applicazione configuratore in realt\`a aumentata dedicata alla visualizzazione di parquet in legno in un contesto domestico. L'applicazione si compone di un men\`u inferiore dedicato alla ricerca e selezione dei prodotti in base alla loro categoria o in base al loro colore. Un prodotto selezionato viene reso visibile agganciato al tag e viene reso disponibile un men\`u laterale in cui e' possibile leggere le informazioni del prodotto, scattare uno screenshot e richiedere un preventivo relativo al parquet selezionato.\\\\
+
+Alla fine del tempo di stage si pu\`o stimare un completamento del progetto quasi totalitario, in quanto l'ultima richiesta da parte del cliente prima della pubblicazione dell'app \`e stata quella di implementare il follow di occhi e testa dell'avatar rispetto alla telecamera. Questo ultimo aspetto \`e stato sviluppato interamente da un collega del reparto tecnico dopo la conclusione del mio stage.\\
