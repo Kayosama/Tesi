@@ -2,34 +2,34 @@
 \select@language {italian}
 \thispagestyle {empty}
 \contentsline {figure}{\numberline {1}{\ignorespaces Logo di Experenti srl}}{1}{figure.1}
-\contentsline {figure}{\numberline {2}{\ignorespaces Grafico Hype Cycle sui principali trend (2014)}}{3}{figure.2}
+\contentsline {figure}{\numberline {2}{\ignorespaces Grafico \textit {Hype Cycle} sui principali \textit {trend} (2014)}}{3}{figure.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Esempio di realta' aumentata - Planisfero}}{4}{figure.3}
 \contentsline {figure}{\numberline {4}{\ignorespaces Esempio di realta' aumentata - Motore}}{5}{figure.4}
 \contentsline {figure}{\numberline {5}{\ignorespaces Esempio di app configuratore}}{6}{figure.5}
 \contentsline {figure}{\numberline {6}{\ignorespaces Flusso dei processi interni secondo la metodologia Agile}}{8}{figure.6}
-\contentsline {figure}{\numberline {7}{\ignorespaces Esempio di Kanban Board}}{10}{figure.7}
+\contentsline {figure}{\numberline {7}{\ignorespaces Esempio di \textit {Kanban Board}}}{10}{figure.7}
 \contentsline {figure}{\numberline {8}{\ignorespaces Interfaccia di Unity 3D}}{11}{figure.8}
 \contentsline {figure}{\numberline {9}{\ignorespaces Architettura di Vuforia SDK e flusso di funzionamento delle operazioni di tracciamento delle immagini}}{12}{figure.9}
 \contentsline {figure}{\numberline {10}{\ignorespaces Esempio sviluppato su Google Cardboard di AR/VR}}{13}{figure.10}
-\contentsline {figure}{\numberline {11}{\ignorespaces Utilizzo dei sistemi operativi mobile nel secondo quarto del 2014 (dato fornito da Net Applications)}}{16}{figure.11}
+\contentsline {figure}{\numberline {11}{\ignorespaces Utilizzo dei sistemi operativi \textit {mobile} nel secondo quarto del 2014 (dato fornito da Net \textit {Applications})}}{16}{figure.11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Versione base di Unity}}{18}{figure.12}
-\contentsline {figure}{\numberline {13}{\ignorespaces Diagramma di Gantt delle attivita'}}{21}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del tutorial riguardante l'animazione di un avatar 3D di cui successivamente \`e stato eseguito il porting su Android}}{24}{figure.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Architettura generale del framework Photon Unity Networking}}{26}{figure.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Schermata iniziale di Call Of Toony con Lobby}}{27}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Call Of Toony - multiplayer su device diversi}}{28}{figure.17}
+\contentsline {figure}{\numberline {13}{\ignorespaces Diagramma di Gantt$_{|g|}$\ delle attivit\`a}}{21}{figure.13}
+\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del \textit {tutorial} riguardante l'animazione di un \textit {avatar$_{|g|}$} 3D di cui successivamente \`e stato eseguito il \textit {porting} su Android}}{24}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Architettura generale del \textit {framework Photon Unity Networking}}}{26}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Schermata iniziale di Call Of Toony con \textit {Lobby}}}{27}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Call Of Toony - \textit {multiplayer} su device diversi}}{28}{figure.17}
 \contentsline {figure}{\numberline {18}{\ignorespaces Call Of Toony - schermata di gioco}}{29}{figure.18}
 \contentsline {figure}{\numberline {19}{\ignorespaces Diagramma dei casi d'uso generico relativo all'applicazione Cora' Parquet Live}}{31}{figure.19}
 \contentsline {figure}{\numberline {20}{\ignorespaces Diagramma delle classi generico}}{34}{figure.20}
 \contentsline {figure}{\numberline {21}{\ignorespaces Layout con menu' info aperto}}{37}{figure.21}
 \contentsline {figure}{\numberline {22}{\ignorespaces Layout con menu inferiore aperto}}{37}{figure.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces Animator Controller del pannello Info laterale}}{39}{figure.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces Animator Controller dell'avatar}}{40}{figure.24}
+\contentsline {figure}{\numberline {23}{\ignorespaces \textit {Animator Controller} del pannello Info laterale}}{39}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces \textit {Animator Controller} dell'\textit {avatar$_{|g|}$}}}{40}{figure.24}
 \contentsline {figure}{\numberline {25}{\ignorespaces Presentazione iniziale}}{43}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Presentazione iniziale - Ventaglio di legno in apertura}}{51}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Presentazione iniziale - Avatar}}{51}{figure.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Tutorial - Istruzioni}}{52}{figure.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Configuratore - Men\`u inferiore aperto e Avatar in presentazione}}{52}{figure.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Configuratore - Pannello info aperto}}{53}{figure.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Configuratore - Men\`u dei Credits aperto}}{53}{figure.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Esempio di realt\`a aumentata}}{54}{figure.32}
+\contentsline {figure}{\numberline {26}{\ignorespaces Presentazione iniziale - Ventaglio di legno in apertura}}{53}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Presentazione iniziale - Avatar}}{53}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Tutorial - Istruzioni}}{54}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Configuratore - Men\`u inferiore aperto e Avatar in presentazione}}{54}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Configuratore - Pannello info aperto}}{55}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Configuratore - Men\`u dei Credits aperto}}{55}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Esempio di realt\`a aumentata}}{56}{figure.32}

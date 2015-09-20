@@ -6,12 +6,12 @@
 \contentsline {subsection}{\numberline {1.2}Organizzazione aziendale}{1}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Prodotti e soluzioni offerte}{2}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}Lo scenario contemporaneo}{2}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Il trend}{3}{subsubsection.1.3.2}
-\contentsline {subsubsection}{\numberline {1.3.3}Il core business}{3}{subsubsection.1.3.3}
+\contentsline {subsubsection}{\numberline {1.3.2}Il \textit {trend}}{3}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}Il \textit {core business$_{|g|}$}}{3}{subsubsection.1.3.3}
 \contentsline {subsubsection}{\numberline {1.3.4}Il prodotto}{4}{subsubsection.1.3.4}
 \contentsline {subsubsection}{\numberline {1.3.5}Tipologie di prodotto}{5}{subsubsection.1.3.5}
 \contentsline {subsection}{\numberline {1.4}Processi aziendali}{6}{subsection.1.4}
-\contentsline {subsubsection}{\numberline {1.4.1}Modello di ciclo di vita software}{6}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.1}Modello di ciclo di vita \textit {software$_{|g|}$}}{6}{subsubsection.1.4.1}
 \contentsline {subsubsection}{\numberline {1.4.2}Strumenti a supporto dei processi}{9}{subsubsection.1.4.2}
 \contentsline {paragraph}{\numberline {1.4.2.1}Sistemi operativi}{9}{paragraph.1.4.2.1}
 \contentsline {paragraph}{\numberline {1.4.2.2}Gestione del versionamento}{9}{paragraph.1.4.2.2}
@@ -47,31 +47,31 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Analisi dei requisiti}{30}{subsubsection.3.3.2}
 \contentsline {subsubsection}{\numberline {3.3.3}Progettazione}{33}{subsubsection.3.3.3}
 \contentsline {paragraph}{\numberline {3.3.3.1}Architettura generale}{35}{paragraph.3.3.3.1}
-\contentsline {paragraph}{\numberline {3.3.3.2}Layout e GUI}{36}{paragraph.3.3.3.2}
-\contentsline {paragraph}{\numberline {3.3.3.3}Animator Controller}{39}{paragraph.3.3.3.3}
+\contentsline {paragraph}{\numberline {3.3.3.2}\textit {Layout} e GUI$_{|g|}$}{36}{paragraph.3.3.3.2}
+\contentsline {paragraph}{\numberline {3.3.3.3}\textit {Animator Controller}}{39}{paragraph.3.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.4}Implementazione}{40}{subsubsection.3.3.4}
-\contentsline {paragraph}{\numberline {3.3.4.1}Pinch-To-Scale}{40}{paragraph.3.3.4.1}
+\contentsline {paragraph}{\numberline {3.3.4.1}\textit {Pinch-To-Scale}}{40}{paragraph.3.3.4.1}
 \contentsline {paragraph}{\numberline {3.3.4.2}Inserimento prodotti}{42}{paragraph.3.3.4.2}
-\contentsline {paragraph}{\numberline {3.3.4.3}Gestione dell'avatar}{42}{paragraph.3.3.4.3}
-\contentsline {paragraph}{\numberline {3.3.4.4}Gestione della GUI}{46}{paragraph.3.3.4.4}
-\contentsline {paragraph}{\numberline {3.3.4.5}Implementazione del tutorial}{46}{paragraph.3.3.4.5}
+\contentsline {paragraph}{\numberline {3.3.4.3}Gestione dell'\textit {avatar$_{|g|}$}}{42}{paragraph.3.3.4.3}
+\contentsline {paragraph}{\numberline {3.3.4.4}Gestione della GUI$_{|g|}$}{46}{paragraph.3.3.4.4}
+\contentsline {paragraph}{\numberline {3.3.4.5}Implementazione del \textit {tutorial}}{46}{paragraph.3.3.4.5}
 \contentsline {subsubsection}{\numberline {3.3.5}Verifica e validazione}{46}{subsubsection.3.3.5}
-\contentsline {subsection}{\numberline {3.4}Livello di completezza raggiunto}{47}{subsection.3.4}
-\contentsline {section}{\numberline {4}Valutazione Retrospettiva}{48}{section.4}
-\contentsline {subsection}{\numberline {4.1}Soddisfacimento obiettivi}{48}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Conoscenze acquisite}{48}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Distanza tra universit\`a e lavoro}{49}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Valutazione personale}{49}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Screenshot finali}{51}{subsection.4.5}
-\contentsline {section}{\numberline {A}Realt\`a Aumentata}{54}{appendix.Alph1}
-\contentsline {section}{Glossario}{56}{section*.12}
-\contentsline {subsection}{A}{56}{section*.13}
-\contentsline {subsection}{B}{56}{section*.17}
-\contentsline {subsection}{C}{56}{section*.20}
-\contentsline {subsection}{G}{57}{section*.23}
-\contentsline {subsection}{I}{57}{section*.26}
-\contentsline {subsection}{P}{57}{section*.29}
-\contentsline {subsection}{R}{57}{section*.32}
-\contentsline {subsection}{S}{58}{section*.35}
-\contentsline {subsection}{T}{58}{section*.38}
-\contentsline {section}{Bibliografia}{59}{section*.41}
+\contentsline {subsection}{\numberline {3.4}Livello di completezza raggiunto}{48}{subsection.3.4}
+\contentsline {section}{\numberline {4}Valutazione Retrospettiva}{50}{section.4}
+\contentsline {subsection}{\numberline {4.1}Soddisfacimento obiettivi}{50}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Conoscenze acquisite}{50}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Distanza tra universit\`a e lavoro}{51}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Valutazione personale}{51}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Screenshot finali}{53}{subsection.4.5}
+\contentsline {section}{\numberline {A}Realt\`a Aumentata}{56}{appendix.Alph1}
+\contentsline {section}{Glossario}{58}{section*.12}
+\contentsline {subsection}{A}{58}{section*.13}
+\contentsline {subsection}{B}{58}{section*.17}
+\contentsline {subsection}{C}{58}{section*.20}
+\contentsline {subsection}{G}{59}{section*.23}
+\contentsline {subsection}{I}{59}{section*.26}
+\contentsline {subsection}{P}{59}{section*.29}
+\contentsline {subsection}{R}{59}{section*.32}
+\contentsline {subsection}{S}{60}{section*.35}
+\contentsline {subsection}{T}{60}{section*.38}
+\contentsline {section}{Bibliografia}{61}{section*.41}
