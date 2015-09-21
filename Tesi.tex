@@ -86,12 +86,14 @@
 \setcounter{tocdepth}{3}
 
 \facciatabianca
+
 \input{\docs Aforismi.tex}
 \facciatabianca
 \input{\docs ringraziamenti.tex}
 \facciatabianca
 
 \tableofcontents
+\thispagestyle{empty}
 \newpage
 \listoffigures
 \listoftables
@@ -99,6 +101,7 @@
 \newpage
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \addtocontents{lof}{\protect\thispagestyle{empty}}
+
 \setcounter{page}{1}
 \input{\docs Introduzione.tex}
 \newpage
