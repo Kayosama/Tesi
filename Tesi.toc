@@ -37,41 +37,41 @@
 \contentsline {subsection}{\numberline {3.1}Pianificazione di progetto}{21}{subsection.3.1}
 \contentsline {subsubsection}{\numberline {3.1.1}Descrizione generale}{21}{subsubsection.3.1.1}
 \contentsline {subsubsection}{\numberline {3.1.2}Dettaglio delle attivit\`a}{22}{subsubsection.3.1.2}
-\contentsline {subsection}{\numberline {3.2}Studio delle tecnologie e strumenti}{23}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.2}Studio delle tecnologie e strumenti}{24}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Unity 3D}{24}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Vuforia SDK}{25}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}Photon Unity Networking}{25}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Esempio di contenuto in realt\`a aumentata a tema libero}{26}{subsubsection.3.2.4}
-\contentsline {subsection}{\numberline {3.3}Svolgimento delle attivit\`a}{29}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}Il cliente}{29}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}Analisi dei requisiti}{30}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}Progettazione}{33}{subsubsection.3.3.3}
-\contentsline {paragraph}{\numberline {3.3.3.1}Architettura generale}{35}{paragraph.3.3.3.1}
-\contentsline {paragraph}{\numberline {3.3.3.2}\textit {Layout} e GUI$_{|g|}$}{36}{paragraph.3.3.3.2}
-\contentsline {paragraph}{\numberline {3.3.3.3}\textit {Animator Controller}}{39}{paragraph.3.3.3.3}
-\contentsline {subsubsection}{\numberline {3.3.4}Implementazione}{40}{subsubsection.3.3.4}
-\contentsline {paragraph}{\numberline {3.3.4.1}\textit {Pinch-To-Scale}}{40}{paragraph.3.3.4.1}
-\contentsline {paragraph}{\numberline {3.3.4.2}Inserimento prodotti}{42}{paragraph.3.3.4.2}
-\contentsline {paragraph}{\numberline {3.3.4.3}Gestione dell'\textit {avatar$_{|g|}$}}{42}{paragraph.3.3.4.3}
-\contentsline {paragraph}{\numberline {3.3.4.4}Gestione della GUI$_{|g|}$}{46}{paragraph.3.3.4.4}
-\contentsline {paragraph}{\numberline {3.3.4.5}Implementazione del \textit {tutorial}}{46}{paragraph.3.3.4.5}
-\contentsline {subsubsection}{\numberline {3.3.5}Verifica e validazione}{46}{subsubsection.3.3.5}
-\contentsline {subsection}{\numberline {3.4}Livello di completezza raggiunto}{48}{subsection.3.4}
-\contentsline {section}{\numberline {4}Valutazione Retrospettiva}{50}{section.4}
-\contentsline {subsection}{\numberline {4.1}Soddisfacimento obiettivi}{50}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Conoscenze acquisite}{51}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Distanza tra universit\`a e lavoro}{53}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Valutazione personale}{54}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Screenshot finali}{56}{subsection.4.5}
-\contentsline {section}{\numberline {A}Realt\`a Aumentata}{59}{appendix.Alph1}
-\contentsline {section}{Glossario}{61}{section*.20}
-\contentsline {subsection}{A}{61}{section*.21}
-\contentsline {subsection}{B}{61}{section*.25}
-\contentsline {subsection}{C}{61}{section*.28}
-\contentsline {subsection}{G}{62}{section*.31}
-\contentsline {subsection}{I}{62}{section*.34}
-\contentsline {subsection}{P}{62}{section*.37}
-\contentsline {subsection}{R}{62}{section*.40}
-\contentsline {subsection}{S}{63}{section*.43}
-\contentsline {subsection}{T}{63}{section*.46}
-\contentsline {section}{Bibliografia}{64}{section*.49}
+\contentsline {subsubsection}{\numberline {3.2.4}Esempio di contenuto in realt\`a aumentata a tema libero}{27}{subsubsection.3.2.4}
+\contentsline {subsection}{\numberline {3.3}Svolgimento delle attivit\`a}{30}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Il cliente}{30}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Analisi dei requisiti}{31}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Progettazione}{34}{subsubsection.3.3.3}
+\contentsline {paragraph}{\numberline {3.3.3.1}Architettura generale}{36}{paragraph.3.3.3.1}
+\contentsline {paragraph}{\numberline {3.3.3.2}\textit {Layout} e GUI$_{|g|}$}{37}{paragraph.3.3.3.2}
+\contentsline {paragraph}{\numberline {3.3.3.3}\textit {Animator Controller}}{40}{paragraph.3.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.4}Implementazione}{41}{subsubsection.3.3.4}
+\contentsline {paragraph}{\numberline {3.3.4.1}\textit {Pinch-To-Scale}}{41}{paragraph.3.3.4.1}
+\contentsline {paragraph}{\numberline {3.3.4.2}Inserimento prodotti}{43}{paragraph.3.3.4.2}
+\contentsline {paragraph}{\numberline {3.3.4.3}Gestione dell'\textit {avatar$_{|g|}$}}{43}{paragraph.3.3.4.3}
+\contentsline {paragraph}{\numberline {3.3.4.4}Gestione della GUI$_{|g|}$}{47}{paragraph.3.3.4.4}
+\contentsline {paragraph}{\numberline {3.3.4.5}Implementazione del \textit {tutorial}}{47}{paragraph.3.3.4.5}
+\contentsline {subsubsection}{\numberline {3.3.5}Verifica e validazione}{47}{subsubsection.3.3.5}
+\contentsline {subsection}{\numberline {3.4}Livello di completezza raggiunto}{49}{subsection.3.4}
+\contentsline {section}{\numberline {4}Valutazione Retrospettiva}{51}{section.4}
+\contentsline {subsection}{\numberline {4.1}Soddisfacimento obiettivi}{51}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Conoscenze acquisite}{52}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Distanza tra universit\`a e lavoro}{54}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Valutazione personale}{56}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Screenshot finali}{57}{subsection.4.5}
+\contentsline {section}{\numberline {A}Realt\`a Aumentata}{60}{appendix.Alph1}
+\contentsline {section}{Glossario}{62}{section*.20}
+\contentsline {subsection}{A}{62}{section*.21}
+\contentsline {subsection}{B}{62}{section*.25}
+\contentsline {subsection}{C}{62}{section*.28}
+\contentsline {subsection}{G}{63}{section*.31}
+\contentsline {subsection}{I}{63}{section*.34}
+\contentsline {subsection}{P}{63}{section*.37}
+\contentsline {subsection}{R}{63}{section*.40}
+\contentsline {subsection}{S}{64}{section*.43}
+\contentsline {subsection}{T}{64}{section*.46}
+\contentsline {section}{Bibliografia e Sitografia}{65}{section*.49}

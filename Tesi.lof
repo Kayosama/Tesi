@@ -14,22 +14,23 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Utilizzo dei sistemi operativi \textit {mobile} nel secondo quarto del 2014 (dato fornito da Net \textit {Applications})}}{16}{figure.11}
 \contentsline {figure}{\numberline {12}{\ignorespaces Versione base di Unity}}{18}{figure.12}
 \contentsline {figure}{\numberline {13}{\ignorespaces Diagramma di Gantt$_{|g|}$\ delle attivit\`a}}{21}{figure.13}
-\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del \textit {tutorial} riguardante l'animazione di un \textit {avatar$_{|g|}$} 3D di cui successivamente \`e stato eseguito il \textit {porting} su Android}}{24}{figure.14}
-\contentsline {figure}{\numberline {15}{\ignorespaces Architettura generale del \textit {framework Photon Unity Networking}}}{26}{figure.15}
-\contentsline {figure}{\numberline {16}{\ignorespaces Schermata iniziale di Call Of Toony con \textit {Lobby}}}{27}{figure.16}
-\contentsline {figure}{\numberline {17}{\ignorespaces Call Of Toony - \textit {multiplayer} su device diversi}}{28}{figure.17}
-\contentsline {figure}{\numberline {18}{\ignorespaces Call Of Toony - schermata di gioco}}{29}{figure.18}
-\contentsline {figure}{\numberline {19}{\ignorespaces Diagramma dei casi d'uso generico relativo all'applicazione Cora' Parquet Live}}{31}{figure.19}
-\contentsline {figure}{\numberline {20}{\ignorespaces Diagramma delle classi generico}}{34}{figure.20}
-\contentsline {figure}{\numberline {21}{\ignorespaces Layout con menu' info aperto}}{37}{figure.21}
-\contentsline {figure}{\numberline {22}{\ignorespaces Layout con menu inferiore aperto}}{37}{figure.22}
-\contentsline {figure}{\numberline {23}{\ignorespaces \textit {Animator Controller} del pannello Info laterale}}{39}{figure.23}
-\contentsline {figure}{\numberline {24}{\ignorespaces \textit {Animator Controller} dell'\textit {avatar$_{|g|}$}}}{40}{figure.24}
-\contentsline {figure}{\numberline {25}{\ignorespaces Presentazione iniziale}}{43}{figure.25}
-\contentsline {figure}{\numberline {26}{\ignorespaces Presentazione iniziale - Ventaglio di legno in apertura}}{56}{figure.26}
-\contentsline {figure}{\numberline {27}{\ignorespaces Presentazione iniziale - Avatar}}{56}{figure.27}
-\contentsline {figure}{\numberline {28}{\ignorespaces Tutorial - Istruzioni}}{57}{figure.28}
-\contentsline {figure}{\numberline {29}{\ignorespaces Configuratore - Men\`u inferiore aperto e Avatar in presentazione}}{57}{figure.29}
-\contentsline {figure}{\numberline {30}{\ignorespaces Configuratore - Pannello info aperto}}{58}{figure.30}
-\contentsline {figure}{\numberline {31}{\ignorespaces Configuratore - Men\`u dei Credits aperto}}{58}{figure.31}
-\contentsline {figure}{\numberline {32}{\ignorespaces Esempio di realt\`a aumentata}}{59}{figure.32}
+\contentsline {figure}{\numberline {14}{\ignorespaces Implementazione in Unity del \textit {tutorial} riguardante l'animazione di un \textit {avatar$_{|g|}$} 3D di cui successivamente \`e stato eseguito il \textit {porting} su Android}}{25}{figure.14}
+\contentsline {figure}{\numberline {15}{\ignorespaces Architettura generale del \textit {framework Photon Unity Networking}}}{27}{figure.15}
+\contentsline {figure}{\numberline {16}{\ignorespaces Schermata iniziale di Call Of Toony con \textit {Lobby}}}{28}{figure.16}
+\contentsline {figure}{\numberline {17}{\ignorespaces Call Of Toony - \textit {multiplayer} su device diversi}}{29}{figure.17}
+\contentsline {figure}{\numberline {18}{\ignorespaces Call Of Toony - schermata di gioco}}{30}{figure.18}
+\contentsline {figure}{\numberline {19}{\ignorespaces Diagramma dei casi d'uso generico relativo all'applicazione Cora' Parquet Live}}{32}{figure.19}
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagramma delle classi generico}}{35}{figure.20}
+\contentsline {figure}{\numberline {21}{\ignorespaces \textit {Layout} con menu' info aperto}}{38}{figure.21}
+\contentsline {figure}{\numberline {22}{\ignorespaces \textit {Layout} con menu inferiore aperto}}{38}{figure.22}
+\contentsline {figure}{\numberline {23}{\ignorespaces \textit {Animator Controller} del pannello Info laterale}}{40}{figure.23}
+\contentsline {figure}{\numberline {24}{\ignorespaces \textit {Animator Controller} dell'\textit {avatar$_{|g|}$}}}{41}{figure.24}
+\contentsline {figure}{\numberline {25}{\ignorespaces Presentazione iniziale}}{44}{figure.25}
+\contentsline {figure}{\numberline {26}{\ignorespaces Applicazione visualizzata all'interno del Play Store}}{50}{figure.26}
+\contentsline {figure}{\numberline {27}{\ignorespaces Presentazione iniziale - Ventaglio di legno in apertura}}{57}{figure.27}
+\contentsline {figure}{\numberline {28}{\ignorespaces Presentazione iniziale - Avatar}}{57}{figure.28}
+\contentsline {figure}{\numberline {29}{\ignorespaces Tutorial - Istruzioni}}{58}{figure.29}
+\contentsline {figure}{\numberline {30}{\ignorespaces Configuratore - Men\`u inferiore aperto e Avatar in presentazione}}{58}{figure.30}
+\contentsline {figure}{\numberline {31}{\ignorespaces Configuratore - Pannello info aperto}}{59}{figure.31}
+\contentsline {figure}{\numberline {32}{\ignorespaces Configuratore - Men\`u dei Credits aperto}}{59}{figure.32}
+\contentsline {figure}{\numberline {33}{\ignorespaces Esempio di realt\`a aumentata}}{60}{figure.33}
